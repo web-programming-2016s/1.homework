@@ -44,3 +44,11 @@
    <input type="submit" value="Save to DB">
    
 <form>
+
+
+<p>Idea:calculator of revenue/expences  1)product name 
+                                        2)Wholesale price
+                                        3)Retail price
+                                        4)Taxation info	
+                                        5)blabalbala										
+</p>
