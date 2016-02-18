@@ -7,10 +7,12 @@
 	//check if there is variable in the URL
 	//if ther is ?to= in the URL
 	
-	// Thanks, I added new code function here:
+	/* 
+	Thanks, I added new code function here:
 	function generateIdea(){
 
-}
+	}
+	*/
 	
 	if(isset($_GET["who"])){ 
 		
@@ -109,3 +111,9 @@
 	
 
 <form>
+
+<p>
+
+
+
+</p>
