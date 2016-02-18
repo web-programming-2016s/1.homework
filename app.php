@@ -68,9 +68,9 @@
 	
 ?>
 
-<h2> First Applications </h2>
+<h2> PUPPY CALCULATOR </h2>
 
-
+<IMG SRC="https://uberfacts.files.wordpress.com/2012/12/puppies-9.jpg" ALT="image one" WIDTH=32 HEIGHT=32>
 
 <form>
 
