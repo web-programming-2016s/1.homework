@@ -92,3 +92,6 @@
 
 
 <form>
+	<p> My idea: Interactive grocery list you can edit and add items there
+  until you finally go to the store. The four fields are vegetables,
+meatproducts, sweets and then the wheatproducts</p>
