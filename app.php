@@ -92,3 +92,9 @@
 	
 	
 <form>
+
+<p> my idea is a puppy calculator
+
+i am going to have pictures in a row. 
+i am going to force the viewer to put the number of the puppies he/she sees in the pictures
+then once the number of puppies is visible we can calculate is using simple numbers.
