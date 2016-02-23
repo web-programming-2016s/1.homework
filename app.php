@@ -9,7 +9,6 @@ label  {color: #e4e4e4;}
 echo {color: #e4e4e4;}
 </style>
   
-  
  
 <form method="get">
 
@@ -34,7 +33,6 @@ echo {color: #e4e4e4;}
 				<option value="Dissatisfied">Dissatisfied</option>
 			</select>
 		
-
 	
 
 
