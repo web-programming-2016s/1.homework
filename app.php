@@ -8,9 +8,11 @@
 label  {color: #e4e4e4;}
 echo {color: #e4e4e4;}
 </style>
-  
+   
+   
  
 <form method="get">
+
 
 
 	<label for="firstname">First name<label><br>
@@ -45,7 +47,7 @@ echo {color: #e4e4e4;}
 
 <?php
 
-//**************
+//**************....
 //to field validation
 //******************
 
