@@ -96,26 +96,67 @@
 
 ?>
 
-<h2> First application </h2>
+<html>
 
+<head>
+<!--This is a part not directly visible for users-->
+<meta charset="UTF-8"> <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+<base target="_blank">
+<link rel="stylesheet" type="text/css" href="app.css">
+<title>"Web programming - APP"</title>
+</head>
+
+<body>
+<!-- This is a real visible part of the web page-->
+<figure id="tlu_logo"><img border=none src="http://www.tlu.ee/~shikter/ristmed2/images/TLU_logo.jpg" alt="TLU" width="200"></figure>
+
+<section id="Menu">
+<h2><small><em>Form to send message</em></small></h2>
+<nav>
+<ul STYLE="list-style-image: url(http://www.tlu.ee/~shikter/ristmed2/images/bullet/tlu_bullet.png)">
 <form method="get">
-	<label for="who">For who the message:* <label><br>
-	<input type="text" name="who"><br><br>
-
-	<label for="message">Type your Message here:* <label><br>
-	<input type="text" name="message"><br><br>
-	
-	<label for="from_who">From who the message:* <label><br>
-	<input type="text" name="from_who"><br><br>
-	
-	<input type="submit" value="Send"><br>
-	
-	
-
-<form>
-
-<p>
 
 
+<li> 	<label for="who">Recipient:* <label><br>
+		<input type="text" name="who"><br>
+<li> 	<label for="message">Message:* <label><br>
+		<input type="text" name="message"><br>
+<li> 	<label for="from_who">Your name:* <label><br>
+		<input type="text" name="from_who"><br><br>
+		
+		<input type="submit" value="Send"><br>
+</ul>
+</nav>
+</section>
+</form>
+<br>
 
+<section id="Terms">
+<h2>Description:</h2>
+<p> Course: "<strong>Web Programming</strong>".</p>
+<p> Teacher: "<strong>Romil Robtsenkov</strong>".</p>
+<p>This Topic about my learning "<strong><small>PHP</small></strong>" & "<strong><small>MySQL</small></strong>" and also "<strong><small>HTML</small></strong>" & "<strong><small>CSS</small></strong>". </p>
+<p>You can see how I develop my skills.
+You can find here my first messanger application. Which is on the head of page.
 </p>
+<center><img src="http://www.tlu.ee/~shikter/ristmed2/images/php-mysql-html-css.png" alt="HTML5 + CSS3" width="325";></center>
+</section>
+
+
+<br>
+<hr />
+
+<section id="address">
+<br>
+
+<address>Tallinn, Narva Rd 29</address>
+
+<div class="bkt"><a href="http://localhost:5555/~shikter/homeworks/1.homework/" target="_self">1.Homework</a></div>
+
+<br>
+
+</section>
+
+
+</body>
+</html>
