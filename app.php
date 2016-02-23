@@ -1,34 +1,101 @@
+
+
+<body bgcolor="#908483"> 
+<h1 style="color:#e4e4e4"> Leave your feedback </h1>
+<h2 style="color:#e4e4e4"> First application </h2>
+<style>
+
+
+
+label  {color: #e4e4e4;}
+echo {color: #e4e4e4;}
+</style>
+ 
+
+<form method="get">
+	
+	<label for="firstname">First name<label><br>
+  <input type="text" name="firstname"><br>
+  
+ <label for="lastname">Last name<label><br>
+  <input type="text" name="lastname"><br>
+
+ <label for="e-mail">E-mail<label><br>
+  <input type="text" name="e-mail"><br><br>
+  
+<label for="message">Message:*<label><br>
+<input type="text" name="message"><br><br>
+
+<h2 style="color:#F5F1ED">How are you satisfied with my work?</h2>
+		
+			<select name="dropdown">
+				<option value="Satisfied"selected>Satisfied</option>
+				<option value="Neutral">Neutral</option>
+				<option value="Dissatisfied">Dissatisfied</option>
+			</select>
+		
+
+
+
+<!--This is the save button -->
+<input type="submit" value="Submit feedback"
+
+
+
+<form><br>
+
 <?php
 
 //**************
 //to field validation
 //******************
-if(isset($_GET["to"])){
-	
-	
-	
-	if(empty($_GET["to"])){
+
+
+
+
+if(empty($_GET["firstname"])){
 		//it is empty
-		echo "Please enter the recipient!";
+		echo "Please enter the name!";
 		
 		}else{
 			//its not empty
-		echo "to: ".$_GET["to"]."<br>";
+		echo "Fist name: ".$_GET["firstname"]."<br>";
+	}
+
+if(empty($_GET["lastname"])){
+		//it is empty
+		echo "Please enter the last name!";
+		
+		}else{
+			//its not empty
+		echo "Last name: ".$_GET["lastname"]."<br>";
+	}
+
+if(isset($_GET["e-mail"])){
+	
+	
+	
+	if(empty($_GET["e-mail"])){
+		//it is empty
+		echo "Please enter e-mail!";
+		
+		}else{
+			//its not empty
+		echo "E-mail: ".$_GET["e-mail"]."<br>";
 	}
 }
 
-
-if(isset($_GET["from"])){
+if(isset($_GET["dropdown"])){
 	
 	
 	
-	if(empty($_GET["from"])){
+	if(empty($_GET["dropdown"])){
 		//it is empty
-		echo "Please enter the recipient!";
+		echo "Please enter the result!";
 		
 		}else{
 			//its not empty
-		echo "from: ".$_GET["from"]."<br>";
+		echo "dropdown: ".$_GET["dropdown"]."<br>";
 	}
 }
 
@@ -56,10 +123,9 @@ if(isset($_GET["message"])){
 
 
 //Getting the message from address
-
-$my_message = $_GET["message"];
-$to = $_GET["to"];
-$from = $_GET["from"];
+//$my_message = $_GET["message"];
+//$to = $_GET["to"];
+//$from = $_GET["from"];
 
 //echo "My message is ".$my_message." and is to ".$to." and is from ".$from;
 
@@ -69,22 +135,3 @@ $from = $_GET["from"];
 
 
 ?>
-
-<h2> First application </h2>
-
-<form method="get">
-<label for="message">Message:*<label><br>
-<input type="text" name="message"><br><br>
-
-<label for="from">from<label><br>
-<input type="text" name="from"><br><br>
-
-
-<label for="to">To<label><br>
-<input type="text" name="to"><br><br>
-<!--This is the save button -->
-<input type="submit" value="Save to DB"
-
-
-
-<form>
