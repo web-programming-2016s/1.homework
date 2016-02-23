@@ -5,15 +5,15 @@
 <h2 style="color:#e4e4e4"> First application </h2>
 <style>
 
-
-
 label  {color: #e4e4e4;}
 echo {color: #e4e4e4;}
 </style>
+  
+  
  
-
 <form method="get">
-	
+
+
 	<label for="firstname">First name<label><br>
   <input type="text" name="firstname"><br>
   
