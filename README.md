@@ -9,8 +9,4 @@
   * should contain atleast 4 fields user can input ([read about different input types (color, texarea etc)](http://www.w3schools.com/html/html_form_input_types.asp))
   * all required fields need to validated, if left empty, should let user know (PS! at least one field should be required)
   
-### Example
-
-1. Idea is to create messenger application, users can send and recieve messages. There is also a history of messages.
-2. 4 fields in the created web page can be :from, :to, :message, date_to_recieve:. Required are :from, :to and :message.
-
+Idea is to make inputs for users in order to get User generated content. In future to scan similar ideas and pick the popular ones.
