@@ -101,7 +101,7 @@
 <head>
 <!--This is a part not directly visible for users-->
 <meta charset="UTF-8"> <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
-<base target="_blank">
+<base target="">
 <link rel="stylesheet" type="text/css" href="app.css">
 <title>"Web programming - APP"</title>
 </head>
@@ -111,7 +111,8 @@
 <figure id="tlu_logo"><img border=none src="http://www.tlu.ee/~shikter/ristmed2/images/TLU_logo.jpg" alt="TLU" width="200"></figure>
 
 <section id="Menu">
-<h2><small><em>Form to send message</em></small></h2>
+<h2><em>Form to send message:</em></h2>
+
 <nav>
 <ul STYLE="list-style-image: url(http://www.tlu.ee/~shikter/ristmed2/images/bullet/tlu_bullet.png)">
 <form method="get">
@@ -125,10 +126,10 @@
 		<input type="text" name="from_who"><br><br>
 		
 		<input type="submit" value="Send"><br>
+</form>		
 </ul>
 </nav>
 </section>
-</form>
 <br>
 
 <section id="Terms">
