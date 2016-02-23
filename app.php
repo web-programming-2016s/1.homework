@@ -14,6 +14,7 @@
 	}
 	*/
 	
+
 	if(isset($_GET["who"])){ 
 		
 		//only if there is message in the URL
@@ -91,6 +92,7 @@
 	
 	
 	//echo "Message from ".$from_who. " to ".$who. " - " .$my_message;
+
 
 ?>
 
