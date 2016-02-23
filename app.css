@@ -79,7 +79,7 @@ dt
 
 li
 {
-	text-transform: capitalize;/*uppercase, lowecase, capitalize*/
+	text-transform: /*capitalize; uppercase, lowecase, capitalize*/
 }
 
 ol

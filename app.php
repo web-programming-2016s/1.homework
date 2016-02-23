@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 	//********************
 	//To field validation
@@ -96,12 +96,14 @@
 
 ?>
 
+
+
 <html>
 
 <head>
 <!--This is a part not directly visible for users-->
 <meta charset="UTF-8"> <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
-<base target="">
+<base target="_self"">
 <link rel="stylesheet" type="text/css" href="app.css">
 <title>"Web programming - APP"</title>
 </head>
@@ -110,7 +112,7 @@
 <!-- This is a real visible part of the web page-->
 <figure id="tlu_logo"><img border=none src="http://www.tlu.ee/~shikter/ristmed2/images/TLU_logo.jpg" alt="TLU" width="200"></figure>
 
-<section id="Menu">
+<section id="Aplication">
 <h2><em>Form to send message:</em></h2>
 
 <nav>
@@ -118,10 +120,12 @@
 <form method="get">
 
 
-<li> 	<label for="who">Recipient:* <label><br>
+<li> 	<label for="who">Name of recipient:* <label><br>
 		<input type="text" name="who"><br>
+		
 <li> 	<label for="message">Message:* <label><br>
-		<input type="text" name="message"><br>
+		<input type="text" width="160" valign="top" name="message"><br>
+		
 <li> 	<label for="from_who">Your name:* <label><br>
 		<input type="text" name="from_who"><br><br>
 		
@@ -129,6 +133,42 @@
 </form>		
 </ul>
 </nav>
+
+<!-- код формы -->
+<br>
+<form name="myForm">
+<input type="hidden" name="action" value="add">
+
+<h3> Beta test for next step </h3> 
+
+<table border="0">
+	<tr>
+		<td width="160">
+			Name of user:
+		</td>
+		<td>
+			<input name="username" style="width: 300px;">
+		</td>
+	</tr>
+	<tr>
+		<td width="160" valign="top">
+			Text:
+		</td>
+		<td>
+			<textarea name="msg" style="width: 300px;"></textarea>
+		</td>
+	</tr>		
+	<tr>
+		<td width="160">
+			&nbsp;
+		</td>
+		<td>
+			<input type="submit" value="Send the message">
+		</td>
+	</tr>
+</table>
+</form>
+
 </section>
 <br>
 
@@ -136,7 +176,7 @@
 <h2>Description:</h2>
 <p> Course: "<strong>Web Programming</strong>".</p>
 <p> Teacher: "<strong>Romil Robtsenkov</strong>".</p>
-<p>This Topic about my learning "<strong><small>PHP</small></strong>" & "<strong><small>MySQL</small></strong>" and also "<strong><small>HTML</small></strong>" & "<strong><small>CSS</small></strong>". </p>
+<p>This topic about my learning "<strong><small>PHP</small></strong>" & "<strong><small>MySQL</small></strong>" and also "<strong><small>HTML</small></strong>" & "<strong><small>CSS</small></strong>". </p>
 <p>You can see how I develop my skills.
 You can find here my first messanger application. Which is on the head of page.
 </p>
@@ -152,7 +192,7 @@ You can find here my first messanger application. Which is on the head of page.
 
 <address>Tallinn, Narva Rd 29</address>
 
-<div class="bkt"><a href="http://localhost:5555/~shikter/homeworks/1.homework/" target="_self">1.Homework</a></div>
+<div class="bkt"><a href="http://localhost:5555/~shikter/homeworks/1.homework/" target="_blank">1.Homework - Folder</a></div>
 
 <br>
 
