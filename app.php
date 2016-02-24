@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--this is a part not visible to users-->
 <meta charset="UTF-8">
-<title>My name is Tony</title>
+<title>web programming course</title>
 <link rel="stylesheet" type="text/css" href="puppies.css">
 
 <?php
@@ -97,11 +96,23 @@
 
 <h2> PUPPY CALCULATOR </h2>
 
-		<IMG SRC="https://uberfacts.files.wordpress.com/2012/12/puppies-9.jpg" ALT="image one" WIDTH=300 HEIGHT=300>
-		<IMG SRC="http://creative.colorado.edu/~jupi6624/dm1/puppies.jpg" ALT="image two" WIDTH=300 HEIGHT=300>
-		<IMG SRC="http://pethealthsupplements.com.au/wp-content/uploads/2015/06/tumblr_static_mom-dog-with-puppies.jpg" ALT="image three" WIDTH=300 HEIGHT=300>
-		<IMG SRC="http://www.liveanimals.tv/wp-content/uploads/2014/03/golden-retriever-puppy-webcam.jpg" ALT="image four" WIDTH=300 HEIGHT=300>
-<form>
+		<IMG SRC="https://uberfacts.files.wordpress.com/2012/12/puppies-9.jpg" ALT="image one" WIDTH=250 HEIGHT=250" STYLE="position:relative; TOP:40px; LEFT:360px;">
+			<IMG 
+			<br>
+			<IMG SRC="http://creative.colorado.edu/~jupi6624/dm1/puppies.jpg" ALT="image two" WIDTH=250 HEIGHT=250" STYLE="position:relative; TOP:40px; LEFT:370px;">
+			<IMG 
+			<br>
+			<IMG SRC="http://pethealthsupplements.com.au/wp-content/uploads/2015/06/tumblr_static_mom-dog-with-puppies.jpg" ALT="image three" WIDTH=250 HEIGHT=250" STYLE="position:relative; TOP:40px; LEFT:380px;">
+			<IMG 
+			<br>
+			<IMG SRC="http://www.liveanimals.tv/wp-content/uploads/2014/03/golden-retriever-puppy-webcam.jpg" ALT="image four" WIDTH=250 HEIGHT=250" STYLE="position:relative; TOP:40px; LEFT:390px;">
+			<IMG 250
+			<br>
+	
+	
+ 
+
+<form><br>
 
 <form method="get">
 
