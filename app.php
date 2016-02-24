@@ -34,11 +34,13 @@
 	
 	//Tail field 
 	if(isset($_GET["tail"])){
-		if(empty($_GET["tail"])){
-		echo "Please enter the tail shape! <br>";
+		if($_GET["tail"]==="empty"){
+				//it is empty
+			echo "Please enter the dolphins tail shape! <br>";
 	}else{
+		//its not empty
 		echo "Tail shape: ".$_GET["tail"]."<br>";
-		}
+	}
 	}
 	
 	
@@ -58,9 +60,7 @@
 
 <h2> Identifying dolphins from pool 7 </h2>
 
-<form> 
-<label for="tail">Tail shape: <label><br>
-	<input type="text" placeholder="Broken or not broken" name="tail"><br>
+
 	
 
 <form method="get">
@@ -76,6 +76,15 @@
 	<label for="dorsal_fin">Dorsal fin: <label><br>
 	<input type="radio" name="dorsal_fin" value="Straight">Straight<br>
 	<input type="radio" name="dorsal_fin" value="Flabby">Flabby<br>
+	
+<form method="get">
+	<label for="tail">Tail shape: <label><br>
+	<select name="tail">
+		<option value="broken">Broken
+		<option value="not broken">Not broken
+		<option value="empty"
+						selected>Select tail shape
+	</select><br>
 	
 <form method="get">
 	<lable for="lenght">Lenght in meters:<label><br>
