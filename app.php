@@ -72,7 +72,7 @@
 
 		<IMG SRC="https://uberfacts.files.wordpress.com/2012/12/puppies-9.jpg" ALT="image one" WIDTH=500 HEIGHT=500>
 		<IMG SRC="http://creative.colorado.edu/~jupi6624/dm1/puppies.jpg" ALT="image two" WIDTH=500 HEIGHT=500>
-		<IMG SRC="https://uberfacts.files.wordpress.com/2012/12/puppies-9.jpg" ALT="image three" WIDTH=500 HEIGHT=500>
+		<IMG SRC="http://pethealthsupplements.com.au/wp-content/uploads/2015/06/tumblr_static_mom-dog-with-puppies.jpg" ALT="image three" WIDTH=500 HEIGHT=500>
 
 <form>
 
