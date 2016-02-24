@@ -5,7 +5,12 @@
     <label for ="name">Name        </label>  <input type="text" name="name" /> <br>
     <label for ="password">Password</label>  <input type="text" name="password" /><br>
 <input type="submit" class="button" name="login" value="Log In" />
-<input type="submit" class="button" name="register" value="Register" />
+    
+   
+        <a class="btn" href="registerPage.php">Register</a>
+
+
+     
 </form>
     </body></html>    
 <?php

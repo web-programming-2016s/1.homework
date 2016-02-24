@@ -6,7 +6,7 @@
     <label for ="name">Name*        </label>  <input type="text" name="name" /> <br>
     <label for ="password">Surname</label>  <input type="text" name="surname" /><br>
     <label for ="name">Mail*       </label>  <input type="text" name="mail" /> <br>
-    <label for ="password">Password*</label>  <input type="text" name="password" /><br>
+    <label for ="password">Password*</label>  <input type="password" name="password" /><br>
     <label for ="gender">Gender</label><br><input type="radio" name="gender" value="male" checked> Male<br>
   <input type="radio" name="gender" value="female"> Female<br>
 
@@ -26,7 +26,7 @@ $user_gender = $_GET["gender"];
 		echo "Please enter your name"."<br>";
 		}
 		else {
-			echo "TO: =".$_GET["to"]."<br>";
+			
 		}
 	}
 	else{
@@ -44,6 +44,7 @@ $user_gender = $_GET["gender"];
 	else{
 		
 	}
+if(isset($_GET["mail"])){
 if(empty($_GET["mail"])){
 		echo "Please enter your mail"."<br>";
 		}
