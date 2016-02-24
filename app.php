@@ -1,65 +1,87 @@
 <?php
-	//check if there is variable in the URL
-	if(isset($_GET["message"])){
+	
+
+	//goal title* field:
+	if(isset($_GET["goal title"])){
 		
-		//only if there is message in the URL
-		//echo "there is message";
-		
-		//if its empty
-		if(empty($_GET["message"])){
+		//if it's empty
+		if(empty($_GET["goal title"])){
 			//it is empty
-			echo "Please enter the message!";
-		}else{
+			echo "Please fill the field!";
+	}else{
 			//its not empty
-			echo "Message: ".$_GET["message"]."<br>";
+			echo "goal title: ".$_GET["goal title"]."<br>"; 
 		}
 		
 	}else{
-		//echo "there is no such thing as message";
+		//echo "there is no such thing as goal";
 	}
 	
-	if(isset($_GET["to"])){
+	//for why is this goal important* field:
+	if(isset($_GET["why is this goal important"])){
 		
-		//only if there is to in the URL
-		//echo "there to message";
+		//only if there is to* in the URL
+		//echo "there is addressee";
 		
-		//if its to
-		if(empty($_GET["to"])){
-			//it is to
-			echo "Please enter the to!";
-		}else{
+		//if it's empty
+		if(empty($_GET["why is this goal important"])){
+			//it is empty
+			echo "Please fill the field!";
+	}else{
 			//its not empty
-			echo "to: ".$_GET["to"]."<br>";
+			echo "why is this goal important: ".$_GET["why is this goal important"]."<br>";
 		}
 		
 	}else{
-		//echo "there is no such thing as message";
+		//echo "there is no such thing as important goal?";
 	}
 	
+//for From* field:
+	if(isset($_GET["Compeltion date"])){
+		
+		//only if there is from* in the URL
+		//echo "there is compeltion date";
+		
+		//if it's empty
+		if(empty($_GET["Compeltion date"])){
+			//it is empty
+			echo "Please fill the field!";
+	}else{
+			//its not empty
+			echo "Compeltion date: ".$_GET["Compeltion date"]."<br>";
+		}
+		
+	}else{
+		//echo "there is no such thing as milestones";
+	}
 	
-	
-	
-	//Getting the message from address
-	// if there is ?name= .. then $_GET["name"]
-	//$my_message = $_GET["message"];
-	//$to = $_GET["to"];
-	
-	
-	//echo "My message is ".$my_message." and is to ".$to;
-	
+	//milestones:* field:
+	if(isset($_GET["milestones"])){
+		
+		//if it's empty
+		if(empty($_GET["milestones"])){
+			//it is empty
+			echo "Please fill the field!";
+	}else{
+			//its not empty
+			echo "milestones: ".$_GET["milestones"]."<br>"; 
+	}
+
 ?>
 
-<h2> First application </h2>
-
+<title>Goal tracker</title>
+<h1>Change the story!</h1>
+<meta>Now it is really easy to keep your promises, 
+enter your goal below and keep track of yout habits.</meta>
 <form method="get">
-	<label for="to">to:* <label>
-	<input type="text" name="to"><br><br>
-	
-	<label for="message">Message:* <label>
-	<input type="text" name="message"><br><br>
-	
-	<!-- This is the save button-->
-	<input type="submit" value="Save to DB">
-	
-<form><!-- APP NAME-->
-"App for tracking habits" 
+<label for="goal title"> Goal title:*</label><br>
+<input type="text" name="goal title"><br>
+<label for="why is this goal important"> Why is this goal important:*</label><br>
+<input type="text" name="why is this goal important"><br>
+<label for="Compeltion date"> Compeltion date:*</label><br>
+<input type="text" name="Compeltion date"><br>
+<label for="milestones"> Milestones:</label><br>
+<input type="text" name="milestones"><br>
+<input type="submit" value="Save my goal"> 
+
+</form>
