@@ -132,36 +132,42 @@
 
 ?>
 
+
+<?php
+	
+	
+	echo "<p />Today is " .date('l, jS \of F Y - H:i:s');
+				   //.date("d.m.Y H:i:s");
+
+?>
+
 <hr />
 
 <?php
-	
-	
-	echo "Today is " .date('l jS \of F Y h:i:s A');
-				   //.date("d.m.Y H:i");
-
+			$dataExists = false;
+				if ($_SERVER["REQUEST_METHOD"] == "POST")
+				{
+			$name = $_POST["name"];
+			$Login_id = $_POST["Login_id"];
+			$date = $_POST["date"];
+			$genre = $_POST["genre"];
+			$description = $_POST["description"];
+				if($name && $Login_id && $date && $genre)
+					{
+			$dataExists = true;
+					}
+				}
 ?>
 
-<?php
-$dataExists = false;
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
-$name = $_POST["name"];
-$Login_id = $_POST["Login_id"];
-$date = $_POST["date"];
-$genre = $_POST["genre"];
-$description = $_POST["description"];
-if($name && $Login_id){
-	$dataExists = true;
-}
-}
-?>
 <html>
 		
         <script type="text/javascript">
 		
 		    function validate(){
-			    var name = document.getElementById('name').value;
-				var Login_id = document.getElementById('Login_id').value;
+			    var Login_id = document.getElementById('Login_id').value;
+				var name = document.getElementById('name').value;
+				var date = document.getElementById('date').value;
+				var genre = document.getElementById('genre').value;
 				var error = '';
 				var formIsValid = true;
 				
@@ -172,6 +178,16 @@ if($name && $Login_id){
 				
 				if(!Login_id){
 					error += "<br>Login field is required";
+					formIsValid = false;
+				}
+				
+				if(!date){
+					error += "<br>Please select date";
+					formIsValid = false;
+				}
+				
+				if(!genre){
+					error += "<br>Please select the type of shooting";
 					formIsValid = false;
 				}
 				
@@ -187,7 +203,9 @@ if($name && $Login_id){
 		
 		<?php
 		    if($dataExists){
-			    echo "<div>
+			    echo 
+				
+				"<div>
 				
 				<br>Login: $Login_id
 				<br>Name: $name
@@ -195,8 +213,11 @@ if($name && $Login_id){
 				<br>Genre: $genre
 				<br>Description: $description
 				
-				</div>";
+				</div>
+				<br>
+				";
 		    }
+			
 		?>
 		
 
@@ -222,7 +243,7 @@ if($name && $Login_id){
 					</td>
 					
 					<td>
-			<input type="text" name="name" id="name" style="width: 300px; placeholder="Your full name">
+			<input type="text"  name="name" id="name" style="width: 300px;" placeholder="Your full name">
 					</td>
 				</tr>
 				
@@ -232,7 +253,7 @@ if($name && $Login_id){
 					</td>
 					
 					<td>
-			</span><input type="number" name="date" id="date" style="width: 300px; placeholder="01.01.2016">
+			</span><input type="numbers" name="date" id="date" style="width: 300px;" placeholder="01.01.2016">
 					</td>
 				</tr>
 				
@@ -242,7 +263,7 @@ if($name && $Login_id){
 					</td>
 					
 					<td>
-			<select id="genre" name="genre" style="width: 300px placeholder="Genre">
+			<select id="genre" name="genre" style="width: 300px;" placeholder="Genre">
 				<option></option>
 				<option>Clip movie</option>
 				<option>Advertisement</option>
@@ -265,7 +286,7 @@ if($name && $Login_id){
 					</td>
 
 					<td>
-			<textarea name="msg" style="width: 300px; height: 120px;"></textarea>
+			<textarea name="description" style="width: 300px; height: 120px;"></textarea>
 					</td>
 				</tr>
 				
@@ -275,7 +296,7 @@ if($name && $Login_id){
 					</td>
 					
 					<td>	
-			<br /><input type="submit" value="Send order">
+		<br>	<input type="submit" value="Send order">
 					</td>
 				</tr>
 				
