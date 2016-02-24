@@ -61,8 +61,5 @@
 	<!-- This is the save button-->
 	<input type="submit" value="Save to DB">
 	
-	"EYE BLINKING METER"
-
-<form>
-
-"EYE BLINKING METER"
+<form><!-- APP NAME-->
+"App for tracking habits" 
