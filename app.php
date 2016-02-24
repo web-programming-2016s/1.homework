@@ -13,24 +13,24 @@
 		//echo "there is message"
 
 		//if its empty
-		if(empty($_GET["color"])){
+		if($_GET["color"]==="empty"){
 				//it is empty
 			echo "Please enter the dolphins color! <br>";
 	}else{
 		//its not empty
-		echo "Color:".$_GET["color"]."<br>";
+		echo "Color: ".$_GET["color"]."<br>";
 	}
 	}else{
 		echo "Nothing is added";
 	}
 	//Dorsal fin field validation 
-	if(isset($_GET["dorsal_fin"])){
-		if(empty($_GET["dorsal_fin"])){
+	
+	if(empty($_GET["dorsal_fin"])){
 		echo "Please enter the dorsal fin shape! <br>";
 	}else{
 		echo "Dorsal fin: ".$_GET["dorsal_fin"]."<br>";
 		}
-	}
+	
 	
 	//Tail field 
 	if(isset($_GET["tail"])){
@@ -58,27 +58,29 @@
 
 <h2> Identifying dolphins from pool 7 </h2>
 
+<form> 
+<label for="tail">Tail shape: <label><br>
+	<input type="text" placeholder="Broken or not broken" name="tail"><br>
+	
+
 <form method="get">
 	<label for="color">Color: <label><br>
-	<input type="text" name="color"><br>
-
-<form>
-
-<?php
-
-?>
+	<select name="color">
+		<option value="grey">Grey
+		<option value="dark grey">Dark grey
+		<option value="empty"
+						selected>Select color
+	</select><br>
 
 <form method="get">
 	<label for="dorsal_fin">Dorsal fin: <label><br>
-	<input type="text" name="dorsal_fin"><br>
+	<input type="radio" name="dorsal_fin" value="Straight">Straight<br>
+	<input type="radio" name="dorsal_fin" value="Flabby">Flabby<br>
 	
 <form method="get">
-	<lable for="lenght">Lenght:<label><br>
-	<input type="text" name="lenght"><br>
-		
-<form> 
-<label for="tail">Tail shape: <label><br>
-	<input type="text" name="tail"><br>
+	<lable for="lenght">Lenght in meters:<label><br>
+	<input type="number" placeholder="insert dolphins lenght" name="lenght"><br>
 	<input type="submit" value="Save to DB">
+
 	
 <?php
