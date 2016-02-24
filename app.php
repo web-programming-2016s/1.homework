@@ -1,8 +1,9 @@
 
 
 <body bgcolor="#908483"> 
+<img src="http://www.tlu.ee/UserFiles/thumbs/__thumb_-2-BFM-logo-suur-EST.jpg";>
 <h1 style="color:#e4e4e4"> Leave your feedback </h1>
-<h2 style="color:#e4e4e4"> First application </h2>
+
 <style>
 
 label  {color: #e4e4e4;}
@@ -34,10 +35,16 @@ echo {color: #e4e4e4;}
 				<option value="Satisfied"selected>Satisfied</option>
 				<option value="Neutral">Neutral</option>
 				<option value="Dissatisfied">Dissatisfied</option>
-			</select>
-		
+			</select><br>
+	<h2 style="color:#F5F1ED">Get delivery notification</h2>	
+		<form style="color:#e4e4e4">
+			<input style="color:#e4e4e4" type="radio"name="subject"value="Recieve e-mail">Recieve
+			<input type="radio"name="subject"value="Dont recieve">Do not recieve
+		</form><br><br>
+
 	
-//empty field
+	
+
 <!--This is the save button -->
 <input type="submit" value="Submit feedback"
 
