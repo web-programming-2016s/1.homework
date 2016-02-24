@@ -43,7 +43,7 @@
 		if (empty($_GET["name"])){//if it is empty
 		echo "What's your name? <br>";//yes it is empty
 		}else{
-			echo "Name: ".$_GET["location"]."<br>";//no it is not empty
+			echo "Name: ".$_GET["name"]."<br>";//no it is not empty
 		}
 	}
 	
