@@ -46,10 +46,29 @@
 		//if its empty
 		if (empty($_GET ["from"])){
 			//it is empty
-			echo " Please insert number of puppies seen on image 1 ";
+			echo " Please insert number of puppies seen on image 3 ";
 		}else{
 			//its not empty
 			echo "from: ".$_GET["from"]."<br>";
+		}
+		
+	}else{
+
+	//echo "there is no such thing as message";
+	}
+		//check if there is variable in the URL
+	if (isset ($_GET ["asi"])) {
+		
+		//only if there is message in the URL
+		//echo "there is message";
+		
+		//if its empty
+		if (empty($_GET ["asi"])){
+			//it is empty
+			echo " Please insert number of puppies seen on image 4 ";
+		}else{
+			//its not empty
+			echo "asi: ".$_GET["asi"]."<br>";
 		}
 		
 	}else{
@@ -70,10 +89,10 @@
 
 <h2> PUPPY CALCULATOR </h2>
 
-		<IMG SRC="https://uberfacts.files.wordpress.com/2012/12/puppies-9.jpg" ALT="image one" WIDTH=500 HEIGHT=500>
-		<IMG SRC="http://creative.colorado.edu/~jupi6624/dm1/puppies.jpg" ALT="image two" WIDTH=500 HEIGHT=500>
-		<IMG SRC="http://pethealthsupplements.com.au/wp-content/uploads/2015/06/tumblr_static_mom-dog-with-puppies.jpg" ALT="image three" WIDTH=500 HEIGHT=500>
-
+		<IMG SRC="https://uberfacts.files.wordpress.com/2012/12/puppies-9.jpg" ALT="image one" WIDTH=300 HEIGHT=300>
+		<IMG SRC="http://creative.colorado.edu/~jupi6624/dm1/puppies.jpg" ALT="image two" WIDTH=300 HEIGHT=300>
+		<IMG SRC="http://pethealthsupplements.com.au/wp-content/uploads/2015/06/tumblr_static_mom-dog-with-puppies.jpg" ALT="image three" WIDTH=300 HEIGHT=300>
+		<IMG SRC="http://www.liveanimals.tv/wp-content/uploads/2014/03/golden-retriever-puppy-webcam.jpg" ALT="image four" WIDTH=300 HEIGHT=300>
 <form>
 
 <form method="get">
@@ -87,10 +106,13 @@
 	
 	<label for="message">IMAGE 3:* <label>
 	<input type="text" name="message"<br><br>
+
+	<label for="asi">IMAGE 3:* <label>
+	<input type="text" name="asi"<br><br>
 	
 		
 	<!-- This is the save buttn-->
-	<input type="Submit" value="Save to DB">
+	<input type="Submit" value="START THE PUPPY CALCULATOR">
 	
 	
 <form>
