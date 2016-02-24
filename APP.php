@@ -1,5 +1,6 @@
 <?php
-
+	
+	
 	//*****************
 	//TO validation
 	//*****************
@@ -75,6 +76,12 @@
 	<input type="text" name="name"><br>
 	
 	<input type="submit" value="Let The Game Begin!">
+	
+	<br>
+	
+	</br>
+	
+		<img src="http://images.sodahead.com/polls/0/0/2/8/6/2/0/0/9/105487930_jigsaw___i_want_to_play_a_game_by_texasrampage_d31e2oc.jpeg">
 	
 	
 	
