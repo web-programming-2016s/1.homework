@@ -9,7 +9,7 @@
 		//if its empty
 		if (empty($_GET ["message"])){
 			//it is empty
-			echo " Bitch, enter the message you fool! ";
+			echo " Please insert number of puppies seen on image 1! ";
 		}else{
 			//its not empty
 			echo "Message: ".$_GET["message"]."<br>";
@@ -28,7 +28,7 @@
 		//if its empty
 		if (empty($_GET ["to"])){
 			//it is empty
-			echo " Bitch, enter the message you fool! ";
+			echo " Please insert number of puppies seen on image 2! ";
 		}else{
 			//its not empty
 			echo "to: ".$_GET["to"]."<br>";
@@ -46,7 +46,7 @@
 		//if its empty
 		if (empty($_GET ["from"])){
 			//it is empty
-			echo " Bitch, enter the message you fool! ";
+			echo " Please insert number of puppies seen on image 1 ";
 		}else{
 			//its not empty
 			echo "from: ".$_GET["from"]."<br>";
@@ -78,14 +78,14 @@
 
 <form method="get">
 
-	<label for="from">From:* <label>
+	<label for="from">IMAGE 1:* <label>
 	<input type="text" name="from"<br><br>
 
-	<label for="to">to:* <label>
+	<label for="to">IMAGE 2:* <label>
 	<input type="text" name="to"<br><br>
 
 	
-	<label for="message">message:* <label>
+	<label for="message">IMAGE 3:* <label>
 	<input type="text" name="message"<br><br>
 	
 		
