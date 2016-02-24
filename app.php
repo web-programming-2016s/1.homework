@@ -207,17 +207,42 @@ if($name && $Login_id){
 		
 			<table border="0">
 				<tr>
-					<td width="160">
+					<td width="185">
             <p />Login<span style="color: red;">*</span>: 
 					</td>
+					
 					<td>
-			<input type="text" name="Login_id" id="Login_id" placeholder="User name">
+			<input type="text" name="Login_id" id="Login_id" style="width: 300px;" placeholder="User name">
 					</td>
 				</tr>
-		
-			<p />Name<span style="color: red;">*</span>: <input type="text" name="name" id="name" placeholder="Your full name">
-			<p /><span title="Issue date">Issue date<span style="color: red;">*</span>: </span><input type="number" name="date" id="date" placeholder="01.01.2016">
-			<p />What kind of movie<span style="color: red;">*</span>: <select id="genre" name="genre" placeholder="Genre">
+				
+				<tr>
+					<td width="185">
+			<p />Name<span style="color: red;">*</span>: 
+					</td>
+					
+					<td>
+			<input type="text" name="name" id="name" style="width: 300px; placeholder="Your full name">
+					</td>
+				</tr>
+				
+				<tr>
+					<td width="185">
+			<p /><span title="Issue date">Issue date<span style="color: red;">*</span>: 
+					</td>
+					
+					<td>
+			</span><input type="number" name="date" id="date" style="width: 300px; placeholder="01.01.2016">
+					</td>
+				</tr>
+				
+				<tr>
+					<td width="185">
+			<p />What kind of movie<span style="color: red;">*</span>: 
+					</td>
+					
+					<td>
+			<select id="genre" name="genre" style="width: 300px placeholder="Genre">
 				<option></option>
 				<option>Clip movie</option>
 				<option>Advertisement</option>
@@ -231,19 +256,35 @@ if($name && $Login_id){
 				<option>Animation</option>
 				<option>Other</option>
 			</select>
+					</td>
+				</tr>
 			
+				<tr>
+					<td width="185">
 			<p />Description: 
+					</td>
 
-			<td>
+					<td>
 			<textarea name="msg" style="width: 300px; height: 120px;"></textarea>
-			</td>
-			
-			<p /><input type="submit" value="Search">
+					</td>
+				</tr>
+				
+				<tr>
+					<td width="185">
+					&nbsp;
+					</td>
+					
+					<td>	
+			<br /><input type="submit" value="Send order">
+					</td>
+				</tr>
+				
+			</table>	
         </form>
 
-<hr />
 
 <!-- код формы -->
+<!-- <hr />
 <br>
 <form name="myForm">
 <input type="hidden" name="action" value="add">
@@ -277,6 +318,7 @@ if($name && $Login_id){
 	</tr>
 </table>
 </form>
+-->
 
 </section>
 <br>
