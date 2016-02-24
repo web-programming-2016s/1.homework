@@ -17,33 +17,33 @@
 				//it is empty
 			echo "You selected: <br>";
 			echo "Please enter the dolphins color! <br>";
-	}else{
-		//its not empty
-		echo "You selected: <br>";
-		echo "Color: ".$_GET["color"]."<br>";
-		$varv = $_GET["color"];
-	}
+		}else{
+			//its not empty
+			echo "You selected: <br>";
+			echo "Color: ".$_GET["color"]."<br>";
+			$varv = $_GET["color"];
+		}
 	}else{
 		echo "Nothing is added";
 	}
 	//Dorsal fin field validation 
-	
-	if(empty($_GET["dorsal_fin"])){
-		echo "Please enter the dorsal fin shape! <br>";
-	}else{
-		echo "Dorsal fin: ".$_GET["dorsal_fin"]."<br>";
+	if(isset($_GET["color"])){
+		if(empty($_GET["dorsal_fin"])){
+			echo "Please enter the dorsal fin shape! <br>";
+		}else{
+			echo "Dorsal fin: ".$_GET["dorsal_fin"]."<br>";
 		}
-	
+	}
 	
 	//Tail field 
 	if(isset($_GET["tail"])){
 		if($_GET["tail"]==="empty"){
 				//it is empty
 			echo "Please enter the dolphins tail shape! <br>";
-	}else{
-		//its not empty
-		echo "Tail shape: ".$_GET["tail"]."<br>";
-	}
+		}else{
+			//its not empty
+			echo "Tail shape: ".$_GET["tail"]."<br>";
+		}
 	}
 	
 	
@@ -51,10 +51,10 @@
 	if(isset($_GET["lenght"])){
 		if(empty($_GET["lenght"])){
 		echo "Please enter the dolphins lenght! <br>";
-	}else{
-		echo "Lenght: ".$_GET["lenght"]."<br>";
+		}else{
+			echo "Lenght: ".$_GET["lenght"]."<br>";
 	
-		}
+			}
 	}
 		
 		
