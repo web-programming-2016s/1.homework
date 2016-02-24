@@ -15,10 +15,13 @@
 		//if its empty
 		if($_GET["color"]==="empty"){
 				//it is empty
+			echo "You selected: <br>";
 			echo "Please enter the dolphins color! <br>";
 	}else{
 		//its not empty
+		echo "You selected: <br>";
 		echo "Color: ".$_GET["color"]."<br>";
+		$varv = $_GET["color"];
 	}
 	}else{
 		echo "Nothing is added";
@@ -50,11 +53,12 @@
 		echo "Please enter the dolphins lenght! <br>";
 	}else{
 		echo "Lenght: ".$_GET["lenght"]."<br>";
+	
 		}
 	}
 		
 		
-			 //echo "My message is ".$my_message." and is to ".$to." from ".$from;
+			
 
 ?>
 
@@ -90,6 +94,3 @@
 	<lable for="lenght">Lenght in meters:<label><br>
 	<input type="number" placeholder="insert dolphins lenght" name="lenght"><br>
 	<input type="submit" value="Save to DB">
-
-	
-<?php
