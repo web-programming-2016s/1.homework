@@ -1,4 +1,40 @@
-﻿<?php
+﻿<html>
+
+<head>
+<!--This is a part not directly visible for users-->
+<meta charset="UTF-8"> <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+<base target="_self"">
+<link rel="stylesheet" type="text/css" href="app.css">
+<title>"Web programming - APP"</title>
+</head>
+
+<body>
+<!-- This is a real visible part of the web page-->
+<figure id="tlu_logo"><img border=none src="http://www.tlu.ee/~shikter/ristmed2/images/TLU_logo.jpg" alt="TLU" width="200"></figure>
+
+<section id="application">
+<h2><em>Form to send message:</em></h2>
+
+<nav>
+<ul STYLE="list-style-image: url(http://www.tlu.ee/~shikter/ristmed2/images/bullet/tlu_bullet.png)">
+<form method="get">
+
+
+<li> 	<label for="who">Name of recipient:* <label><br>
+		<input type="text" name="who"><br>
+		
+<li> 	<label for="message">Message:* <label><br>
+		<input type="text" width="160" valign="top" name="message"><br>
+		
+<li> 	<label for="from_who">Your name:* <label><br>
+		<input type="text" name="from_who"><br><br>
+		
+		<input type="submit" value="Send"><br>
+</form>		
+</ul>
+</nav>
+
+<?php
 
 	//********************
 	//To field validation
@@ -96,43 +132,15 @@
 
 ?>
 
+<hr />
 
+<?php
+	
+	
+	echo "Today is " .date('l jS \of F Y h:i:s A');
+				   //.date("d.m.Y H:i");
 
-<html>
-
-<head>
-<!--This is a part not directly visible for users-->
-<meta charset="UTF-8"> <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
-<base target="_self"">
-<link rel="stylesheet" type="text/css" href="app.css">
-<title>"Web programming - APP"</title>
-</head>
-
-<body>
-<!-- This is a real visible part of the web page-->
-<figure id="tlu_logo"><img border=none src="http://www.tlu.ee/~shikter/ristmed2/images/TLU_logo.jpg" alt="TLU" width="200"></figure>
-
-<section id="Aplication">
-<h2><em>Form to send message:</em></h2>
-
-<nav>
-<ul STYLE="list-style-image: url(http://www.tlu.ee/~shikter/ristmed2/images/bullet/tlu_bullet.png)">
-<form method="get">
-
-
-<li> 	<label for="who">Name of recipient:* <label><br>
-		<input type="text" name="who"><br>
-		
-<li> 	<label for="message">Message:* <label><br>
-		<input type="text" width="160" valign="top" name="message"><br>
-		
-<li> 	<label for="from_who">Your name:* <label><br>
-		<input type="text" name="from_who"><br><br>
-		
-		<input type="submit" value="Send"><br>
-</form>		
-</ul>
-</nav>
+?>
 
 <!-- код формы -->
 <br>
