@@ -142,6 +142,107 @@
 
 ?>
 
+<?php
+$dataExists = false;
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+$name = $_POST["name"];
+$Login_id = $_POST["Login_id"];
+$date = $_POST["date"];
+$genre = $_POST["genre"];
+$description = $_POST["description"];
+if($name && $Login_id){
+	$dataExists = true;
+}
+}
+?>
+<html>
+		
+        <script type="text/javascript">
+		
+		    function validate(){
+			    var name = document.getElementById('name').value;
+				var Login_id = document.getElementById('Login_id').value;
+				var error = '';
+				var formIsValid = true;
+				
+				if(!name){
+					error += "<br>Name field is required";
+					formIsValid = false;
+				}
+				
+				if(!Login_id){
+					error += "<br>Login field is required";
+					formIsValid = false;
+				}
+				
+				document.getElementById('errors').innerHTML = error;
+				return formIsValid;
+			}
+		</script>		
+		
+	</head>
+
+    <body> 
+        <h3>Make a reservation:</h3>
+		
+		<?php
+		    if($dataExists){
+			    echo "<div>
+				
+				<br>Login: $Login_id
+				<br>Name: $name
+				<br>Date: $date
+				<br>Genre: $genre
+				<br>Description: $description
+				
+				</div>";
+		    }
+		?>
+		
+
+		<div id="errors" style="color: red;"></div>
+		
+		
+        <form id="dataForm" method="post" onsubmit="return validate();" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		
+			<table border="0">
+				<tr>
+					<td width="160">
+            <p />Login<span style="color: red;">*</span>: 
+					</td>
+					<td>
+			<input type="text" name="Login_id" id="Login_id" placeholder="User name">
+					</td>
+				</tr>
+		
+			<p />Name<span style="color: red;">*</span>: <input type="text" name="name" id="name" placeholder="Your full name">
+			<p /><span title="Issue date">Issue date<span style="color: red;">*</span>: </span><input type="number" name="date" id="date" placeholder="01.01.2016">
+			<p />What kind of movie<span style="color: red;">*</span>: <select id="genre" name="genre" placeholder="Genre">
+				<option></option>
+				<option>Clip movie</option>
+				<option>Advertisement</option>
+				<option>TV production (procedural, broadcasting...)</option>
+				<option>Home movie (travel, wedding...)</option>
+				<option>Documentary</option>
+				<option>Short movie</option>
+				<option>Feature film</option>
+				<option>Silent film</option>
+				<option>Blue movie (+18)</option>
+				<option>Animation</option>
+				<option>Other</option>
+			</select>
+			
+			<p />Description: 
+
+			<td>
+			<textarea name="msg" style="width: 300px; height: 120px;"></textarea>
+			</td>
+			
+			<p /><input type="submit" value="Search">
+        </form>
+
+<hr />
+
 <!-- код формы -->
 <br>
 <form name="myForm">
