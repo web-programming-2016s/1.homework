@@ -9,7 +9,6 @@ label  {color: #e4e4e4;}
 echo {color: #e4e4e4;}
 </style>
    
-   
  
  
 <form method="get">
@@ -38,11 +37,9 @@ echo {color: #e4e4e4;}
 			</select>
 		
 	
-
-
+//empty field
 <!--This is the save button -->
 <input type="submit" value="Submit feedback"
-
 
 
 <form><br>
