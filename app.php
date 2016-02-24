@@ -7,51 +7,60 @@
  //$from = $_GET["from"];
  
 	//check if there is variable in the URL
-	if(isset($_GET["message"])){
+	if(isset($_GET["color"])){
 		
 		//only if there is message in the URL
 		//echo "there is message"
 
 		//if its empty
-		if(empty($_GET["message"])){
+		if(empty($_GET["color"])){
 				//it is empty
-			echo "Please enter the message!";
+			echo "Please enter the dolphins color! <br>";
 	}else{
 		//its not empty
-		echo "Message:".$_GET["message"]."<br>";
+		echo "Color:".$_GET["color"]."<br>";
 	}
 	}else{
-		echo "theres no such thing as message";
+		echo "Nothing is added";
 	}
-	//to field validation 
-	if(isset($_GET["to"])){
-		if(empty($_GET["to"])){
-		echo "Please enter the recipient! <br>";
+	//Dorsal fin field validation 
+	if(isset($_GET["dorsal_fin"])){
+		if(empty($_GET["dorsal_fin"])){
+		echo "Please enter the dorsal fin shape! <br>";
 	}else{
-		echo "To: ".$_GET["to"]."<br>";
+		echo "Dorsal fin: ".$_GET["dorsal_fin"]."<br>";
 		}
 	}
 	
-	//from field 
-	if(isset($_GET["from"])){
-		if(empty($_GET["from"])){
-		echo "Please enter the third one! <br>";
+	//Tail field 
+	if(isset($_GET["tail"])){
+		if(empty($_GET["tail"])){
+		echo "Please enter the tail shape! <br>";
 	}else{
-		echo "From: ".$_GET["from"]."<br>";
+		echo "Tail shape: ".$_GET["tail"]."<br>";
+		}
+	}
+	
+	
+	//lenght feild  
+	if(isset($_GET["lenght"])){
+		if(empty($_GET["lenght"])){
+		echo "Please enter the dolphins lenght! <br>";
+	}else{
+		echo "Lenght: ".$_GET["lenght"]."<br>";
 		}
 	}
 		
- //echo "My message is ".$my_message." and is to ".$to." from ".$from;
+		
+			 //echo "My message is ".$my_message." and is to ".$to." from ".$from;
 
- 
 ?>
 
-<h2> First application </h2>
+<h2> Identifying dolphins from pool 7 </h2>
 
 <form method="get">
-	<label for="message">Message:* <label><br>
-	<input type="text" name="message"><br>
-	
+	<label for="color">Color: <label><br>
+	<input type="text" name="color"><br>
 
 <form>
 
@@ -60,12 +69,16 @@
 ?>
 
 <form method="get">
-	<label for="to">To <label><br>
-	<input type="text" name="to"><br>
+	<label for="dorsal_fin">Dorsal fin: <label><br>
+	<input type="text" name="dorsal_fin"><br>
 	
-
+<form method="get">
+	<lable for="lenght">Lenght:<label><br>
+	<input type="text" name="lenght"><br>
+		
 <form> 
-<label for="from">From <label><br>
-	<input type="text" name="from"><br>
+<label for="tail">Tail shape: <label><br>
+	<input type="text" name="tail"><br>
 	<input type="submit" value="Save to DB">
 	
+<?php
