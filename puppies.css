@@ -1,0 +1,25 @@
+ body
+{
+	background-color:lightgrey;
+	color:#383838;
+	width: 1200px;
+	
+}
+
+
+
+p 
+{
+	text-indent: 2em;
+	line-height: 160%;
+	font-family: "Berlin Sans FB", verdana, sans-serif;
+	
+}
+
+h2
+{
+	text-indent: 28em;
+	line-height: 250%;
+	font-family: "Berlin Sans FB", verdana, sans-serif;
+	
+}
