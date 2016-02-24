@@ -107,7 +107,7 @@
 	<label for="message">IMAGE 3:* <label>
 	<input type="text" name="message"<br><br>
 
-	<label for="asi">IMAGE 3:* <label>
+	<label for="asi">IMAGE 4:* <label>
 	<input type="text" name="asi"<br><br>
 	
 		
