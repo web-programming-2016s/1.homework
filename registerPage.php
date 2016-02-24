@@ -19,4 +19,39 @@ $user_surname = $_GET["surname"];
 $user_password = $_GET["password"];
 $user_mail = $_GET["mail"];
 $user_gender = $_GET["gender"];
+
+		if(isset($_GET["name"])){
+		
+	if(empty($_GET["name"])){
+		echo "Please enter your name"."<br>";
+		}
+		else {
+			echo "TO: =".$_GET["to"]."<br>";
+		}
+	}
+	else{
+		
+	}
+		if(isset($_GET["password"])){
+		
+	if(empty($_GET["password"])){
+		echo "Please enter your password"."<br>";
+		}
+		else {
+			
+		}
+	}
+	else{
+		
+	}
+if(empty($_GET["mail"])){
+		echo "Please enter your mail"."<br>";
+		}
+		else {
+			
+		}
+	}
+	else{
+		
+	}
 ?>
