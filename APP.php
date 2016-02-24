@@ -3,33 +3,49 @@
 	//*****************
 	//TO validation
 	//*****************
-	if (isset($_GET["to"])){//if there is "?to=" in the message
-		if (empty($_GET["to"])){//if it is empty
-		echo "Please enter recipient! <br>";//yes it is empty
+	if (isset($_GET["location"])){//if there is "?location=" in the message
+		if (empty($_GET["location"])){//if it is empty
+		echo "Define location! <br>";//yes it is empty
 		}else{
-			echo "To: ".$_GET["to"]."<br>";//no it is not empty
+			echo "Location: ".$_GET["location"]."<br>";//no it is not empty
 		}
 	}
 	
 	//check if there is variable in the URL
-	if (isset ($_GET["message"])){
+	if (isset ($_GET["time"])){
 		
 		//only if there is message in the URL
 		//echo "there is message";
 		
 		// if it is empty
-		if (empty ($_GET["message"])){
+		if (empty ($_GET["time"])){
 			//it is empty
-			echo "Please enter the message!";
+			echo "What time are you meeting? <br>";
 		}else{
 			//It is not empty
-			echo "Message: ".$_GET["message"]."<br>";
+			echo "Time: ".$_GET["time"]."<br>";
 		}
 	}else{
-		//echo "There is no such thing as message";
+		
 	}
 	
 	
+	
+	if (isset($_GET["punishment"])){//if there is "?punishment=" in the message
+		if (empty($_GET["punishment"])){//if it is empty
+		echo "What's the punishment? <br>";//yes it is empty
+		}else{
+			echo "Punishment: ".$_GET["punishment"]."<br>";//no it is not empty
+		}
+	}
+	
+	if (isset($_GET["name"])){//if there is "?name=" in the message
+		if (empty($_GET["name"])){//if it is empty
+		echo "What's your name? <br>";//yes it is empty
+		}else{
+			echo "Name: ".$_GET["location"]."<br>";//no it is not empty
+		}
+	}
 	
 	
 	//Getting the message from the address
@@ -40,25 +56,28 @@
 	//echo "My message is " .$my_message. " and it is to " .$to;
 	
 	
-?>
 
+
+?>
 <h2> First Application </h2>
 
 <form method="get">
-	<label for="to">To* <label><br>
-	<input type="text" name="to"><br>
+	<label for="location">Location* <label><br>
+	<input type="text" name="location"><br>
 	
-	<label for="message">Message* <label><br>
-	<input type="text" name="message"><br>
+	<label for="time">Time* <label><br>
+	<input type="text" name="time"><br>
 	
-	<label for="urgency">Urgency* <label><br>
-	<input type="text" name="Urgency"><br>
+	<label for="punishment">Punishment* <label><br>
+	<input type="text" name="punishment"><br>
 	
-	<input type="submit" value="save to DB">
+	<label for="name">Name* <label><br>
+	<input type="text" name="name"><br>
+	
+	<input type="submit" value="Let The Game Begin!">
 	
 	
 	
-
 
 
 <form>
