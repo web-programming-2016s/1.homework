@@ -14,5 +14,9 @@
 </form>
     </body></html>    
 <?php
-
+$user_name = $_GET["name"];
+$user_surname = $_GET["surname"];
+$user_password = $_GET["password"];
+$user_mail = $_GET["mail"];
+$user_gender = $_GET["gender"];
 ?>
