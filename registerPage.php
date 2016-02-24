@@ -9,6 +9,14 @@
     <label for ="password">Password*</label>  <input type="password" name="password" /><br>
     <label for ="gender">Gender</label><br><input type="radio" name="gender" value="male" checked> Male<br>
   <input type="radio" name="gender" value="female"> Female<br>
+  
+	<label for="phone">Your mobile phone brand: <label><br>
+	<select name="phone">
+		<option value="iphone">Iphone
+		<option value="samsung">Samsung
+		<option value="other"
+						selected>Select
+	</select><br>
 
 <input type="submit" class="button" name="register" value="Submit" />
 </form>
