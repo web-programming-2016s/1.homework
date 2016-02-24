@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--this is a part not visible to users-->
+<meta charset="UTF-8">
+<title>My name is Tony</title>
+<link rel="stylesheet" type="text/css" href="puppies.css">
+
 <?php
 
 	//check if there is variable in the URL

@@ -1,0 +1,10 @@
+ body
+{
+	background-color:lightblue;
+	color:#202020;
+	width: 1200px;
+	background-image: url("images/tlu_h200.png");
+	background-repeat: no-repeat;
+	background-position: 1100px 100px;
+	background-attachment: fixed;
+}
