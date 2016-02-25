@@ -58,8 +58,17 @@ h1, h2
 				{
 					font-size: 1.5em; /*x-large, xx-small, medium, small, large, smaller, larger*/
 				}
-
-
+				
+				/*	h3
+						{
+							font-size: 2em;
+						}
+				*/
+				
+					h3
+						{
+							text-indent: 33px;
+						}
 p
 {
 	/* margin-left:1cm; */

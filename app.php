@@ -152,8 +152,10 @@
 ?>
 
 <html>
+
+	<h3>Make a reservation:</h3>
 		
-        <script type="text/javascript">
+	<script type="text/javascript">
 		
 		    function validate(){
 			    var Login_id = document.getElementById('Login_id').value;
@@ -192,142 +194,139 @@
 				document.getElementById('errors').innerHTML = error;
 				return formIsValid;
 			}
-		</script>		
-	
-        <h3>Make a reservation:</h3>
-		
-		<?php
-		    if($dataExists){
-			    echo 
-				
-				"<div>
-				
-				<br>Login: $Login_id
-				<br>Name: $name
-				<br>Date: $date
-				<br>Type of shooting: $genre
-				<br>Description: $description
-				
-				</div>
-				<br>
-				";
-			}
-		?>
-		
+	</script>		
 
-		<div id="errors" style="color: red;"></div>
 		
+<?php
+		if($dataExists){
+			echo 
+				
+			"<div>
+				
+			<br>Login: $Login_id
+			<br>Name: $name
+			<br>Date: $date
+			<br>Type of shooting: $genre
+			<br>Description: $description
+				
+			</div>
+			<br>
+			";
+		}
+?>
 		
-        <form id="dataForm" method="post" onsubmit="return validate();" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	<div id="errors" style="color: red;"></div>	
 		
-			<table border="0">
+	<form id="dataForm" method="post" onsubmit="return validate();" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		
+		<br>
+		
+		<table border="0">
 				<tr>
 					<td width="185">
-            <p />Login<span style="color: red;">*</span>: 
+						<p />Login<span style="color: red;">*</span>: 
 					</td>
 					
 					<td>
-			<input type="text" name="Login_id" id="Login_id" style="width: 300px;" placeholder="User name">
+						<input type="text" name="Login_id" id="Login_id" style="width: 300px;" placeholder="User name">
 					</td>
 				</tr>
 				
 				<tr>
 					<td width="185">
-			<p />Name<span style="color: red;">*</span>: 
+						<p />Name<span style="color: red;">*</span>: 
 					</td>
 					
 					<td>
-			<input type="text"  name="name" id="name" style="width: 300px;" placeholder="Your full name">
+						<input type="text"  name="name" id="name" style="width: 300px;" placeholder="Your full name">
 					</td>
 				</tr>
 				
 				<tr>
 					<td width="185">
-			<p /><span title="Issue date">Issue date<span style="color: red;">*</span>: 
+						<p /><span title="Issue date">Issue date<span style="color: red;">*</span>: 
 					</td>
 					
 					<td>
-			<input type="date" name="date" id="date" style="width: 300px;" placeholder="31.12.2016">
+						<input type="date" name="date" id="date" style="width: 300px;" placeholder="31.12.2016">
 					</td>
 				</tr>
 				
 				<tr>
 					<td width="185">
-			<p />What kind of movie<span style="color: red;">*</span>: 
+						<p />What kind of movie<span style="color: red;">*</span>: 
 					</td>
 					
 					<td>
-			<select id="genre" name="genre" style="width: 300px;" placeholder="Genre">
-				<!-- <option value="notselected">Pick a category:</option>  NOT WORKING > without IF and ELSE. -->
-				<option></option>
-				<option>Clip movie</option>
-				<option>Advertisement</option>
-				<option>TV production (procedural, broadcasting...)</option>
-				<option>Home movie (travel, wedding...)</option>
-				<option>Documentary</option>
-				<option>Short movie</option>
-				<option>Feature film</option>
-				<option>Silent film</option>
-				<option>Blue movie (+18)</option>
-				<option>Animation</option>
-				<option>Other</option>
-			</select>
+						<select id="genre" name="genre" style="width: 300px;" placeholder="Genre">
+						
+							<!-- <option value="notselected">Pick a category:</option>  NOT WORKING > without IF and ELSE. -->
+							<option></option>
+							<option>Clip movie</option>
+							<option>Advertisement</option>
+							<option>TV production (procedural, broadcasting...)</option>
+							<option>Home movie (travel, wedding...)</option>
+							<option>Documentary</option>
+							<option>Short movie</option>
+							<option>Feature film</option>
+							<option>Silent film</option>
+							<option>Blue movie (+18)</option>
+							<option>Animation</option>
+							<option>Other</option>
+						</select>
 					</td>
 				</tr>
 			
 				<tr>
 					<td width="185">
-			<p />Description: 
+						<p />Description: 
 					</td>
 
 					<td>
-			<textarea name="description" style="width: 300px; height: 120px;"></textarea>
+						<textarea name="description" style="width: 300px; height: 120px;"></textarea>
 					</td>
 				</tr>
 				
 				<tr>
 					<td width="185">
-					&nbsp;
+						&nbsp;
 					</td>
 					
 					<td>	
-		<br>	<input type="submit" value="Send order">
+				<br>	<input type="submit" value="Send order">
 					</td>
 				</tr>
 				
-			</table>	
-        </form>
+		</table>	
+	</form>
 
 </section>
 
 <br>
 
 <section id="Terms">
-<h2>Description:</h2>
-<p> Course: "<strong>Web Programming</strong>".</p>
-<p> Teacher: "<strong>Romil Robtsenkov</strong>".</p>
-<p>This topic about my learning "<strong><small>PHP</small></strong>" & "<strong><small>MySQL</small></strong>" and also "<strong><small>HTML</small></strong>" & "<strong><small>CSS</small></strong>". </p>
-<p>You can see how I develop my skills.
-You can find here my first messanger application. Which is on the head of page.
-</p>
-<center><img src="../../homeworks/1.homework/img/php-mysql-html-css.png" alt="PHP + MySQL & HTML5 + CSS3" width="325";></center>
+	<h2>Description:</h2>
+		<p> Course: "<strong>Web Programming</strong>".</p>
+		<p> Teacher: "<strong>Romil Robtsenkov</strong>".</p>
+		<p>This topic about my learning "<strong><small>PHP</small></strong>" & "<strong><small>MySQL</small></strong>" and also "<strong><small>HTML</small></strong>" & "<strong><small>CSS</small></strong>". </p>
+		<p>You can see how I develop my skills. You can find here my first messanger application. Which is on the head of page.</p>
+		
+	<center><img src="../../homeworks/1.homework/img/php-mysql-html-css.png" alt="PHP + MySQL & HTML5 + CSS3" width="325";></center>
 </section>
-
 
 <br>
 <hr />
 
 <section id="address">
+
 <br>
 
-<address>Tallinn, Narva Rd 29</address>
-
-<div class="bkt"><a href="http://localhost:5555/~shikter/homeworks/1.homework/" target="_blank">1.Homework - Folder</a></div>
+		<address>Tallinn, Narva Rd 29</address>
+	<div class="bkt"><a href="http://localhost:5555/~shikter/homeworks/1.homework/" target="_blank">1.Homework - Folder</a></div>
 
 <br>
 
 </section>
-
 
 </body>
 </html>
