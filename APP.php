@@ -60,7 +60,7 @@
 
 
 ?>
-<h2> First Application </h2>
+<h2> Don't Be Late </h2>
 
 <form method="get">
 	<label for="location">Location* <label><br>
