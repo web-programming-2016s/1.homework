@@ -68,7 +68,7 @@
 	
 
 <form method="get">
-	<label for="color">Color: <label><br>
+	<label for="color">Color: </label><br>
 	<select name="color">
 		<option value="grey">Grey
 		<option value="dark grey">Dark grey
@@ -77,12 +77,12 @@
 	</select><br>
 
 <form method="get">
-	<label for="dorsal_fin">Dorsal fin: <label><br>
+	<label for="dorsal_fin">Dorsal fin: </label><br>
 	<input type="radio" name="dorsal_fin" value="Straight">Straight<br>
 	<input type="radio" name="dorsal_fin" value="Flabby">Flabby<br>
 	
 <form method="get">
-	<label for="tail">Tail shape: <label><br>
+	<label for="tail">Tail shape: </label><br>
 	<select name="tail">
 		<option value="broken">Broken
 		<option value="not broken">Not broken
@@ -91,6 +91,6 @@
 	</select><br>
 	
 <form method="get">
-	<lable for="lenght">Lenght in meters:<label><br>
+	<lable for="lenght">Lenght in meters:</label><br>
 	<input type="number" placeholder="insert dolphins lenght" name="lenght"><br>
 	<input type="submit" value="Save to DB">
