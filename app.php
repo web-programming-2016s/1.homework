@@ -1,5 +1,8 @@
 <?php
 
+    // require another php file ../../.. means folders back 
+    require_once("../../config.php");
+
      //if there is variable in the URL
      if(isset($_GET["message"])){
          
@@ -49,18 +52,48 @@
             //its is not empty
             echo "from: ".$_GET["from"]."<br>";
         }
-         
+        
+    
+     //connection with username and password
+     //access username from config
+     //echo $db_username;
+     //1 servername
+     //2 username
+     //3 passward
+     //4 database
+     $mysql = new mysqli("localhost", $db_username, $db_passward, "webpr2016_angcas");
+        
+    $stmt = $mysql->prepare("INSERT INTO messages_sample (recipient, message) VALUES (?,?)");
+        
+        //echo error
+        echo $mysql->error;
+
+        //We are replacing question marks wiht values
+        //s - string, date or smth that is based on characters and 
+        //i - integer, number
+        //d - decimal, float
+        
+        //for each question mark its type with one letter
+        $stmt->bind_param("ss", $_GET["to"], $_GET["message"]);
+        
+        //save 
+        if ($stmt->execute()){
+            echo "saved successfully";
+        }else{
+            echo $stmt->error;
+        }
+        
      }else{
          echo "there is not such a thing as message";
      }
 
       //getting the message from address
       //if there is ?name= .. then $_GET["name"]
-      $my_message = $_GET["message"];
-      $to = $_GET["to"];
-      $from = $_GET["from"];
+      //$my_message = $_GET["message"];
+      //$to = $_GET["to"];
+      //$from = $_GET["from"];
 
-      echo "My message is ".$my_message." and is to ".$to;
+      //echo "My message is ".$my_message." and is to ".$to;
     
 ?>
     
