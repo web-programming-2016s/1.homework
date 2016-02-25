@@ -20,13 +20,13 @@
 <form method="get">
 
 
-<li> 	<label for="who">Name of recipient:* <label><br>
+<li> 	<label for="who">Name of recipient*: <label><br>
 		<input type="text" name="who"><br>
 		
-<li> 	<label for="message">Message:* <label><br>
-		<input type="text" width="160" valign="top" name="message"><br>
+<li> 	<label for="message">Message*: <label><br>
+		<input type="text" style="width: 173px; height: 45px;" valign="top" name="message"><br>
 		
-<li> 	<label for="from_who">Your name:* <label><br>
+<li> 	<label for="from_who">Your name*: <label><br>
 		<input type="text" name="from_who"><br><br>
 		
 		<input type="submit" value="Send"><br>
@@ -42,13 +42,6 @@
 
 	//check if there is variable in the URL
 	//if ther is ?to= in the URL
-	
-	/* 
-	Thanks, I added new code function here:
-	function generateIdea(){
-
-	}
-	*/
 	
 
 	if(isset($_GET["who"])){ 
@@ -69,10 +62,8 @@
 	}else{
 		//echo "there is no such thing as message";
 		
-		
-// -------------------------------------------------------------------
-		
 	}
+// -------------------------------------------------------------------
 	
 	
 		if(isset($_GET["message"])){
@@ -185,6 +176,12 @@
 					error += "<br>Please select date";
 					formIsValid = false;
 				}
+				/*else{
+					if(preg_match("^[0-3][0-9].[0-1][0-9].[0-9]{4}$",$date)){
+						//true
+					}else{
+						formIsValid = false;
+					}*/
 				
 				if(!genre){
 					error += "<br>Please select the type of shooting";
@@ -195,6 +192,8 @@
 				return formIsValid;
 			}
 		</script>		
+		
+	</head>
 		
 	</head>
 
@@ -210,13 +209,12 @@
 				<br>Login: $Login_id
 				<br>Name: $name
 				<br>Date: $date
-				<br>Genre: $genre
+				<br>Type of shooting: $genre
 				<br>Description: $description
 				
 				</div>
 				<br>
 				";
-		    }
 			
 		?>
 		
@@ -253,7 +251,7 @@
 					</td>
 					
 					<td>
-			</span><input type="numbers" name="date" id="date" style="width: 300px;" placeholder="31.12.2016">
+			<input type="date" name="date" id="date" style="width: 300px;" placeholder="31.12.2016">
 					</td>
 				</tr>
 				
@@ -264,6 +262,7 @@
 					
 					<td>
 			<select id="genre" name="genre" style="width: 300px;" placeholder="Genre">
+				<!-- <option value="notselected">Pick a category:</option>  NOT WORKING > without IF and ELSE. -->
 				<option></option>
 				<option>Clip movie</option>
 				<option>Advertisement</option>
@@ -315,7 +314,7 @@
 <p>You can see how I develop my skills.
 You can find here my first messanger application. Which is on the head of page.
 </p>
-<center><img src="http://www.tlu.ee/~shikter/ristmed2/images/php-mysql-html-css.png" alt="PHP + MySQL & HTML5 + CSS3" width="325";></center>
+<center><img src="../../homeworks/1.homework/img/php-mysql-html-css.png" alt="PHP + MySQL & HTML5 + CSS3" width="325";></center>
 </section>
 
 
