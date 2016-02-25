@@ -1,18 +1,22 @@
 
-
+<html>
+<head>
 <body bgcolor="#908483"> 
 <img src="http://www.tlu.ee/UserFiles/thumbs/__thumb_-2-BFM-logo-suur-EST.jpg";>
 <h1 style="color:#e4e4e4"> Leave your feedback </h1>
-
+</head>
 <style>
 
 label  {color: #e4e4e4;}
 echo {color: #e4e4e4;}
 </style>
    
+  <body> 
+
  
  
 <form method="get">
+
 
 
 
@@ -36,8 +40,10 @@ echo {color: #e4e4e4;}
 				<option value="Neutral">Neutral</option>
 				<option value="Dissatisfied">Dissatisfied</option>
 			</select><br>
+	
 	<h2 style="color:#F5F1ED">Get delivery notification</h2>	
-		<form style="color:#e4e4e4">
+	
+	<form style="color:#e4e4e4">
 			<input style="color:#e4e4e4" type="radio"name="subject"value="Recieve e-mail">Recieve
 			<input type="radio"name="subject"value="Dont recieve">Do not recieve
 		</form><br><br>
@@ -48,7 +54,7 @@ echo {color: #e4e4e4;}
 <!--This is the save button -->
 <input type="submit" value="Submit feedback"
 
-
+	
 <form><br>
 
 <?php
@@ -56,7 +62,6 @@ echo {color: #e4e4e4;}
 //**************....
 //to field validation
 //******************
-
 
 
 
@@ -125,7 +130,6 @@ if(isset($_GET["message"])){
 }
 
 
-	
 
 
 
@@ -142,3 +146,9 @@ if(isset($_GET["message"])){
 
 
 ?>
+
+
+
+
+</body>
+</html>

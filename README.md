@@ -9,4 +9,8 @@
   * should contain atleast 4 fields user can input ([read about different input types (color, texarea etc)](http://www.w3schools.com/html/html_form_input_types.asp))
   * all required fields need to validated, if left empty, should let user know (PS! at least one field should be required)
   
-Idea is to make inputs for users in order to get User generated content. In future to scan similar ideas and pick the popular ones.
+Idea.
+I am more interested in web design. As we know to make good design, you should be very flexible.
+If we are talking about programming aspects. Then my idea is to make special form for users in order to get User generated content.
+It can be applicable for different topics (design, content for projects, feedbacks). 
+If possible try to make system, which will scan similar ideas and pick the most popular.
