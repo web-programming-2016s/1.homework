@@ -1,8 +1,4 @@
 <?php
- *****
- IDEE
- //Idee. Kui basseinis on 3 delfiini siis neid on raske eristada. Nii et lehekülje idee on 
- // see, et kui sisestada looma tunnused siis see ülteb ära mis loomaga tegemist on. 
  
  
  //getting the message from address
