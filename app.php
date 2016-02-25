@@ -35,7 +35,7 @@ echo {color: #e4e4e4;}
 
 <h2 style="color:#F5F1ED">How are you satisfied with my work?</h2>
 		
-			<select name="dropdown">
+			<select name="Result">
 				<option value="Satisfied"selected>Satisfied</option>
 				<option value="Neutral">Neutral</option>
 				<option value="Dissatisfied">Dissatisfied</option>
@@ -97,17 +97,17 @@ if(isset($_GET["e-mail"])){
 	}
 }
 
-if(isset($_GET["dropdown"])){
+if(isset($_GET["Result"])){
 	
 	
 	
-	if(empty($_GET["dropdown"])){
+	if(empty($_GET["Result"])){
 		//it is empty
 		echo "Please enter the result!";
 		
 		}else{
 			//its not empty
-		echo "dropdown: ".$_GET["dropdown"]."<br>";
+		echo "Result: ".$_GET["Result"]."<br>";
 	}
 }
 
