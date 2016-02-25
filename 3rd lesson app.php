@@ -66,35 +66,6 @@ p  {
 
 <?php
 
-if(isset($_GET["to"])){
-	if(empty($_GET["to"])){
-		//it is empty
-		$everything_was_okay = false;
-		echo "Please enter the recipient!";
-
-		}else{
-			//its not empty
-		echo "to: ".$_GET["to"]."<br>";
-	}
-}
-
-
-if(isset($_GET["from"])){
-
-
-
-	if(empty($_GET["from"])){
-		//it is empty
-		$everything_was_okay = false;
-		echo "Please enter the recipient!";
-
-		}else{
-			//its not empty
-		echo "from: ".$_GET["from"]."<br>";
-	}
-}
-
-
 	//check if there is variable in the URL
 	if (isset ($_GET ["a"])) {
 		//only if there is message in the URL
@@ -170,13 +141,6 @@ if(isset($_GET["from"])){
 	}else{
 		//echo "there is no such thing as message";
 	}
-
-
-  //********************************
-//  **********Save to DB*************
-  //*********************************
-
-  //was everything oK?
 
 	//Getting the message from the address
 	// if there is ?name= .. then $_GET ["name"]
