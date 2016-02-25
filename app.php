@@ -31,7 +31,7 @@ and leave positive comments /send reminders. The app could be accessible after e
 	<label for="gender"> I am:*</label><br>
 	<input type="radio" name="gender" value="Male"> Male<br>
 	<input type="radio" name="gender" value="Female"> Female<br>
-</form>
+
 
 <?php
 
@@ -61,10 +61,8 @@ and leave positive comments /send reminders. The app could be accessible after e
 <br><br>
 		
 
-<form method="get">
 	<label for="age"> Age:*</label>
 	<input type="number" name="age" min="1" max="130" ><br>
-</form>
 
 <?php			
 	//for Age* field:
@@ -88,10 +86,8 @@ and leave positive comments /send reminders. The app could be accessible after e
 ?>
 <br><br>
 
-<form method="get"
 	<label for="height"> Height (cm):*</label>
 	<input type="number" name="height" min="50" max="250"><br>
-</form>
 
 <?php	
 	//for Height* field:
@@ -116,11 +112,9 @@ and leave positive comments /send reminders. The app could be accessible after e
 ?>
 <br><br>
 
-<form method="get"
 	<label for="weight"> Weight (kg):*</label>
 	<input type="number" name="weight" min="15" max="600"><br><br>
-	<input type="submit" value="Get my BMI"> 
-</form>
+
 <?php	
 		//for Weight* field:
 	if(isset($_GET["weight"])){
@@ -143,4 +137,5 @@ and leave positive comments /send reminders. The app could be accessible after e
 	
 ?>
 
-
+	<br><input type="submit" value="Get my BMI"> 
+</form>
