@@ -1,0 +1,122 @@
+body
+{
+	background-color:#828282;
+	color:#000000;
+	margin: auto;
+	padding: auto;
+	width: 901px;
+	background-image: url("http://www.tlu.ee/~shikter/ristmed2/images/Back_Ground_pg1.jpg");
+	                                   /* background-repeat: repeat-y; */
+									   /* background-position: center; or 1100px; */
+	background-attachment: fixed;      /* background-attachment: scroll; or fixed; */
+	background-size: 2000px;
+}
+
+section
+{
+	width: 875px;
+	padding: 15px;
+	
+	background-color:rgba(190,190,190,0.9);
+	background-image: url("http://www.tlu.ee/~shikter/ristmed2/images/top_right_01_transparent.png"), url("http://www.tlu.ee/~shikter/ristmed2/images/bottom_right_01_transparent.png");
+	background-repeat: no-repeat;
+	background-position: top right, bottom right;
+
+	background-size: 50px;
+	background-origin: content-box; /* padding-box;border-box; */
+	
+	/*borders*/
+	
+	border-style: double; /*none; hidden; solid; dotted; dashed; double; groove; ridge; inset; outset; */
+	border-width: 5px;
+	border-color: black;
+	border-bottom-color: #990000; 
+	
+	/*border: double 10px #990000;*/
+	
+	border-radius: 25px;
+	border-top-left-radius: 15px;
+}
+
+
+h1, h2
+{
+	/* color: */
+	/*margin-left:0.7cm;*/
+	text-align: center;
+	/*font-family: fontForHeadings;*/
+	text-decoration: underline; /*none, underline, overline, line-through*/
+}
+
+	h1
+		{
+			font-size: 2em;
+		}
+		
+		
+			h2
+				{
+					font-size: 1.5em; /*x-large, xx-small, medium, small, large, smaller, larger*/
+				}
+
+
+p
+{
+	/* margin-left:1cm; */
+	text-indent: 2em;     /* em = 16 points or px or... */
+	line-height: 140%;    /*normal - default, multiplier, exact value, percentage,*/
+	/*font-family:*/      /*arial, arial black, comic sans ms, courier, courier new, georgia, helvetica, impact, palatino, times new roman, trebuchet ms, verdana*/
+						  /*generic font families: serif, sans-serif, cursive, monospace*/
+	
+} 
+
+dt
+{
+	font-style: italic; /*normal, italic, oblique*/
+	font-weight: 900;   /*normal, lighter, bolder, 100, 200, 300, 400 (normal), 500, 600, 700 (bold), 800, 900*/ 
+	font-variant: small-caps;
+}
+
+li
+{
+	text-transform: /*capitalize; uppercase, lowecase, capitalize*/
+}
+
+ol
+{
+	 list-style-type: /*katakana; upper-roman; decimal-leading-zero; */
+}
+
+
+ul
+{
+	/*list-style-type: square; [disc, circle, square, none]*/
+	/*list-style-image: url("http://www.tlu.ee/~shikter/ristmed2/images/bullet/tlu_bullet.png");*/
+}
+
+
+address
+{
+margin-right:1cm;
+float:right;
+} 
+
+.bkt 
+{
+	text-align:center;  /*text-align:center; */
+}
+
+
+img
+{
+	border-width: 7px;
+	border-image: url("http://www.tlu.ee/~shikter/ristmed2/images/borders/vintage-frame-border.jpg") 25 repeat;
+}
+
+
+a:link {color:#4682B4;} /* unvisited link */
+a:visited {color:#6A5ACD;}  /* visited link */
+a:hover {color:#FFFAF0;}  /* mouse over link */
+a:active {color:#4682B4;}  /* selected link */ 
+
+
