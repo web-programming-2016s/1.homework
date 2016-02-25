@@ -1,30 +1,44 @@
 <?php
+	$everything_was_okay = true;
 	//check if there is variable in the URL
-	if(isset($_GET["message"])){
+	if(isset($_GET["to"])){ //if there is ?to= in the URL
+		if(empty($_GET["to"])){ //if it is empty
+			$everything_was_okay = false; //empty
+			echo "Please enter the user you want to challenge! <br>"; // yes it is empty
+		}else{
+			echo "To: ".$_GET["to"]."<br>"; //no it is not empty
+		}
+	}else{
+		$everything_was_okay = false; // do not exist
+	}
+	//check if there is variable in the URL
+	if(isset($_GET["motion"])){
 		
-		//only if there is message in the URL
-		//echo "there is message";
+		//only if there is motion in the URL
+		//echo "there is motion";
 		
 		//if its empty
-		if(empty($_GET["message"])){
+		if(empty($_GET["motion"])){
 			//it is empty
-			echo "Please enter the message!";
+			$everything_was_okay = false;
+			echo "Please enter the motion!";
 		}else{
 			//its not empty
-			echo "Message: ".$_GET["message"]."<br>";
+			echo "Motion: ".$_GET["motion"]."<br>";
 		}
 		
 	}else{
-		//echo "there is no such thing as message";
+		//echo "there is no such thing as motion";
+		$everything_was_okay = false;
 	}
 	
 	//Getting the message from address
 	// if there is ?name= .. then $_GET["name"]
-	//$my_message = $_GET["message"];
+	//$my_motion = $_GET["motion"];
 	//$to = $_GET["to"];
 	
 	
-	//echo "My message is ".$my_message." and is to ".$to;
+	//echo "My motion is ".$my_motion." and is to ".$to;
 	
 ?>
 
@@ -32,13 +46,18 @@
 
 <form method="get">
 	<label for="to">User to Challenge:* <label>
-	<input type="text" name="to"><br><br><br>
+	<input type="text" placeholder="@" name="to"><br><br>
 	
-	<label for="message">Motion:* <label>
-	<input type="text" name="message"><br><br><br>
+	<label for="motion">Motion:* <label>
+	<input type="text" name="motion"><br><br>
 	
+	Position: <br>
+	<input type="radio" name="Position" value="Pro" checked> Pro<br>
+    <input type="radio" name="Position" value="Against"> Against<br><br>
+	
+	Visibility: <br>
 	<input type="radio" name="Visibility" value="open" checked> Open<br>
-    <input type="radio" name="Visibility" value="Closed"> Closed<br><br><br>
+    <input type="radio" name="Visibility" value="Closed"> Closed<br><br>
 	
 	Start Date:
     <input type="date" name="bday"><br><br>
