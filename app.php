@@ -33,6 +33,7 @@
 </form>		
 </ul>
 </nav>
+</html>
 
 <?php
 
@@ -192,12 +193,7 @@
 				return formIsValid;
 			}
 		</script>		
-		
-	</head>
-		
-	</head>
-
-    <body> 
+	
         <h3>Make a reservation:</h3>
 		
 		<?php
@@ -215,7 +211,7 @@
 				</div>
 				<br>
 				";
-			
+			}
 		?>
 		
 
