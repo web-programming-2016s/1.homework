@@ -14,3 +14,6 @@
 1. Idea is to create messenger application, users can send and recieve messages. There is also a history of messages.
 2. 4 fields in the created web page can be :from, :to, :message, date_to_recieve:. Required are :from, :to and :message.
 
+MY IDEA 
+Users can set a meeting point and time and there is going to be a countdown to the set time. At the end of the countdown, the users will receive an e-mail.
+Users will input an item that they will provide the other person with if they are late.
