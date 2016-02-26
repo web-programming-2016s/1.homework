@@ -72,4 +72,9 @@ $from = $_GET["From"];*/
 
   My idea is to make a webapplication where you can easily search on map for places to go, events to visit. You can add your budget and
     travelling time, so it will calculate the fuel costs(if travelling by car) and show you the best offers.
-    But since i have no skills and don't know how to do it I think i won't develop that idea. No other ideas still.
+    But since i have no skills and don't know how to do it I think i won't develop that idea. No other ideas still.<br>
+
+  <br>
+  II Idea
+    Budget managing and tracking your expenses. Creating lists for different fields ( entertainment, household, travelling, freetime, kids etc)
+that help you keep your money management under controll, without collecting receips and bills.
