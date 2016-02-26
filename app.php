@@ -69,3 +69,7 @@ $from = $_GET["From"];*/
      <input type= "submit" value= "Save to DB">
 
 <form>
+
+  My idea is to make a webapplication where you can easily search on map for places to go, events to visit. You can add your budget and
+    travelling time, so it will calculate the fuel costs(if travelling by car) and show you the best offers.
+    But since i have no skills and don't know how to do it I think i won't develop that idea. No other ideas still.
