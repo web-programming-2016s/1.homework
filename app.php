@@ -1,3 +1,6 @@
+ <h1 style="color:Purple;">My first application</h1>
+ <h2 style="color:black;">Manage your money</h2>
+<body style="background-color:lightgrey;">
 <?php
 //check if there is variable in the URL
 if (isset($_GET["From"])) {
@@ -52,7 +55,6 @@ $from = $_GET["From"];*/
 
  ?>
 
- <h2> First application  </h2>
 
 <form method="get">
 
@@ -84,4 +86,4 @@ $from = $_GET["From"];*/
   <br>
   II Idea
     Budget managing and tracking your expenses. Creating lists for different fields ( entertainment, household, travelling, freetime, kids etc)
-that help you keep your money management under controll, without collecting receips and bills.
+that help you keep your money management under controll, without collecting receips and bills. Will go with thi i think
