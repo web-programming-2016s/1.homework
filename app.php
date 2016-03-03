@@ -86,27 +86,27 @@ Password:<br>
 </html>
 <input type="submit" value="Sign In">
 <input type="submit" value="Sign Up">
-<br>
 
-<a href="table.php">Your Achivements</a>
-</br>
+<br></br>
+<form method="get">
 
-<!--<form method="get">
-
-	<label for="name">To:<label><br>
-	<input type="text" name="name"><br>
+	<label for="what">What:<label><br>
+	<input type="text" name="what"><br>
 	
-	<label for="from">From:<label><br>
-	<input type="text" name="from"><br>
+	<label for="quantity">Quantity:<label><br>
+	<input type="text" name="quantity"><br>
 	
-	<label for="message">Message:<label><br>
-	<input type="text" name="message"><br>
+	<label for="deadline">Deadline:<label><br>
+	<input type="text" name="deadline"><br>
 	
 	
-	<input type="submit" value="Save to DB">
+	<input type="submit" value="Save">
 	
 	
 <form>	
+<br>
+<a href="table.php">Check Your Achivements</a>
+</br>
 
 <!--*************************************************************************************************************************************************************-->
 <!--IDEA: Make an application, where is possible to make a shopping list. Add product, edit or delete it. The list auto-deletes in a week-->
