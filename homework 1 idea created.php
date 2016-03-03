@@ -33,7 +33,7 @@
 		//if its empty
 		if(empty($_GET["from"])){
 			//it is empty
-			echo "Please enter the message!";
+			echo "Please enter your name!";
 		}else{
 			//its not empty
 			echo "From: ".$_GET["from"]."<br>";
@@ -51,7 +51,7 @@
 		//if its empty
 		if(empty($_GET["to"])){
 			//it is empty
-			echo "Please enter the message!";
+			echo "Please enter to whom the letter is address to!";
 		}else{
 			//its not empty
 			echo "To: ".$_GET["to"]."<br>";
@@ -87,7 +87,7 @@
 		//if its empty
 		if(empty($_GET["phone_number"])){
 			//it is empty
-			echo "Please enter phone number!";
+			echo "Please enter your phone number!";
 		}else{
 			//its not empty
 			echo "Phone number: ".$_GET["phone_number"]."<br>";
@@ -105,7 +105,7 @@
 		//if its empty
 		if(empty($_GET["mobility1"])){
 			//it is empty
-			echo "Please check voluntary work box as possible option"
+			echo "Please enter if you are interested in voluntary work!";
 		}else{
 			//its not empty
 			echo "Mobility 1: ".$_GET["mobility1"]."<br>";
@@ -123,7 +123,7 @@
 		//if its empty
 		if(empty($_GET["mobility2"])){
 			//it is empty
-			echo "Please check seminars box as possible option!";
+			echo "Please enter if you are interested in Seminars!";
 		}else{
 			//its not empty
 			echo "Mobility 2: ".$_GET["mobility2"]."<br>";
@@ -141,7 +141,7 @@
 		//if its empty
 		if(empty($_GET["mobility3"])){
 			//it is empty
-			echo "Please check youth exchanges box as possible option!";
+			echo "Please enter if you are interested in Youth Exchange!";
 		}else{
 			//its not empty
 			echo "Mobility 3: ".$_GET["mobility3"]."<br>";
@@ -159,7 +159,7 @@
 		//if its empty
 		if(empty($_GET["mobility4"])){
 			//it is empty
-			echo "Please check semianrs box as possible option!";
+			echo "Please enter if you are interested in trainings!";
 		}else{
 			//its not empty
 			echo "Mobility 4: ".$_GET["mobility4"]."<br>";
