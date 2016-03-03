@@ -1,4 +1,11 @@
 <?php
+
+	//require another php file
+	// ../../../ means > 3 folders back
+	require_once("../../config.php");
+	
+	$everything_was_okay = true;
+
 	//*************************************
 	//check if there is variable in the URL
 	//*************************************
@@ -63,9 +70,28 @@
 
 ?>
 
-<h2> First application </h2>
+<h2> Achive Your Goal Application </h2>
+<!DOCTYPE html>
+<html>
+<body>
 
-<form method="get">
+<form action="">
+Username:<br>
+<input type="text" name="userid">
+<br>
+Password:<br>
+<input type="password" name="psw">
+</form>
+</body>
+</html>
+<input type="submit" value="Sign In">
+<input type="submit" value="Sign Up">
+<br>
+
+<a href="table.php">Your Achivements</a>
+</br>
+
+<!--<form method="get">
 
 	<label for="name">To:<label><br>
 	<input type="text" name="name"><br>
@@ -85,5 +111,5 @@
 <!--*************************************************************************************************************************************************************-->
 <!--IDEA: Make an application, where is possible to make a shopping list. Add product, edit or delete it. The list auto-deletes in a week-->
 <!--*************************************************************************************************************************************************************-->
-<!--2. IDEA: Make a GOAL application. Where you write your goal and try to achive having time limits. e.g. READ 2 books during this month. Days and books to go. -->
+<!--2. IDEA: Make a GOAL application. Where you write your goal and try to achive having time limits. e.g. READ 2 books during this month. "Days and books to go". -->
 <!--*************************************************************************************************************************************************************-->
