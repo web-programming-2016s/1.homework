@@ -1,3 +1,11 @@
+/*
+
+It is a forum page. It contains login and register page. There will be topic and comment sections.
+
+*/
+
+
+
 <html>
 <body>
     <h2> Forum Page </h2>
