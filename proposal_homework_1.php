@@ -105,7 +105,7 @@
 		//if its empty
 		if(empty($_GET["mobility1"])){
 			//it is empty
-			echo "Please check voluntary work box as possible option!"
+			echo "Please check voluntary work box as possible option!";
 		}else{
 			//its not empty
 			echo "Mobility 1: ".$_GET["mobility1"]."<br>";
