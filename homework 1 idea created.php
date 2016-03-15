@@ -96,78 +96,50 @@
 	}else{
 		//echo "there is no such thing as message";
     }
+    
+    $if_there_is_mob_cked = false;
 
     if(isset($_GET["mobility1"])){
 		
-		//only if there is message in the URL
-		//echo "there is message";
-		
-		//if its empty
-		if(empty($_GET["mobility1"])){
-			//it is empty
-			echo "Please enter if you are interested in voluntary work!";
-		}else{
 			//its not empty
 			echo "Mobility 1: ".$_GET["mobility1"]."<br>";
-		}
+            $if_there_is_mob_cked = true;
 		
-	}else{
+	    }
+
+    else{
 		//echo "there is no such thing as message";
     }
+
+    $if_there_is_mob_cked = false;
 
     if(isset($_GET["mobility2"])){
 		
-		//only if there is message in the URL
-		//echo "there is message";
-		
-		//if its empty
-		if(empty($_GET["mobility2"])){
-			//it is empty
-			echo "Please enter if you are interested in Seminars!";
-		}else{
 			//its not empty
 			echo "Mobility 2: ".$_GET["mobility2"]."<br>";
+            $if_there_is_mob_cked = true;
 		}
 		
-	}else{
+    else{
 		//echo "there is no such thing as message";
     }
+
+    $if_there_is_mob_cked = false;
 
     if(isset($_GET["mobility3"])){
 		
-		//only if there is message in the URL
-		//echo "there is message";
-		
-		//if its empty
-		if(empty($_GET["mobility3"])){
-			//it is empty
-			echo "Please enter if you are interested in Youth Exchange!";
-		}else{
 			//its not empty
 			echo "Mobility 3: ".$_GET["mobility3"]."<br>";
+            $if_there_is_mob_cked = true;
 		}
 		
-	}else{
+    else{
 		//echo "there is no such thing as message";
     }
 
-   if(isset($_GET["mobility4"])){
-		
-		//only if there is message in the URL
-		//echo "there is message";
-		
-		//if its empty
-		if(empty($_GET["mobility4"])){
-			//it is empty
-			echo "Please enter if you are interested in trainings!";
-		}else{
-			//its not empty
-			echo "Mobility 4: ".$_GET["mobility4"]."<br>";
-		}
-		
-	}else{
-		//echo "there is no such thing as message";
-    }
+if($if_there_is_mob_cked == false){
+    echo "please check at least one box";
+}
 
 ?>
 

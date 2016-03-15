@@ -61,7 +61,7 @@
      //2 username
      //3 passward
      //4 database
-     $mysql = new mysqli("localhost", $db_username, $db_passward, "webpr2016_angcas");
+     $mysql = new mysql("localhost", $db_username, $db_passward, "webpr2016_angcas");
         
     $stmt = $mysql->prepare("INSERT INTO messages_sample (recipient, message) VALUES (?,?)");
         
