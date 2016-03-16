@@ -1,15 +1,36 @@
 <?php
 
+	// require another php file
+	// ../../../ => 3 folders back
+	require_once("../../../config.php");
+
+	$everything_was_okay = true;
+
+	//*********************
+	// TO field validation
+	//*********************
+	if(isset($_GET["to"])){ //if there is ?to= in the URL
+		if(empty($_GET["to"])){ //if it is empty
+			$everything_was_okay = false; //empty
+			echo "Please enter the recipient! <br>"; // yes it is empty
+		}else{
+			echo "To: ".$_GET["to"]."<br>"; //no it is not empty
+		}
+	}else{
+		$everything_was_okay = false; // do not exist
+	}
+
 	//check if there is variable in the URL
-	if (isset ($_GET ["message"])) {
+	if(isset($_GET["message"])){
 		
 		//only if there is message in the URL
 		//echo "there is message";
 		
 		//if its empty
-		if (empty($_GET ["message"])){
+		if(empty($_GET["message"])){
 			//it is empty
-			echo "Please enter the message <br>";
+			$everything_was_okay = false;
+			echo "Please enter the message! <br>";
 		}else{
 			//its not empty
 			echo "Message: ".$_GET["message"]."<br>";
@@ -17,78 +38,74 @@
 		
 	}else{
 		//echo "there is no such thing as message";
+		$everything_was_okay = false;
 	}
 	
-	//check if there is variable in the URL
-	if (isset ($_GET ["to"])) {
+	
+	
+	/***********************
+	**** SAVE TO DB ********
+	***********************/
+	
+	// ? was everything okay
+	if($everything_was_okay == true){
 		
-		//only if there is message in the URL
-		//echo "there is message";
+		echo "Saving to database ... ";
 		
-		//if its empty
-		if (empty($_GET ["to"])){
-			//it is empty
-			echo "Please enter the recipient <br> ";
+		
+		//connection with username and password
+		//access username from config
+		//echo $db_username;
+		
+		// 1 servername
+		// 2 username
+		// 3 password
+		// 4 database
+		$mysql = new mysqli("localhost", $db_username, $db_password, "webpr2016_piekos");
+		
+		$stmt = $mysql->prepare("INSERT INTO messages_sample (recipient, message) VALUES (?,?)");
+			
+		//echo error
+		echo $mysql->error;
+		
+		// we are replacing question marks with values
+		// s - string, date or smth that is based on characters and numbers
+		// i - integer, number
+		// d - decimal, float
+		
+		//for each question mark its type with one letter
+		$stmt->bind_param("ss", $_GET["to"], $_GET["message"]);
+		
+		//save
+		if($stmt->execute()){
+			echo "saved sucessfully";
 		}else{
-			//its not empty
-			echo "to: ".$_GET["to"]."<br>";
+			echo $stmt->error;
 		}
 		
-	}else{
-		//echo "there is no such thing as message";
-	}
-		//check if there is variable in the URL
-	if (isset ($_GET ["from"])) {
 		
-		//only if there is message in the URL
-		//echo "there is message";
-		
-		//if its empty
-		if (empty($_GET ["from"])){
-			//it is empty
-			echo "Please enter your name <br>";
-		}else{
-			//its not empty
-			echo "From: ".$_GET["from"]."<br>";
-		}
-		
-	}else{
-		//echo "there is no such thing as message";
 	}
 	
-	//Getting the message from the address
-	// if there is ?name= .. then $_GET ["name"]
-	//$my_message = $_GET["message"];
-	//$to = $_GET ["to"];
-	//$from = $_GET ["from"];
 	
-	//echo "My message is ".$my_message." and is to ".$to. " and is from " .$from;
 
-	
-	
 ?>
-
-<h2> First Applications </h2>
-
-
-
-<form>
+<br>
+<a href="table.php">table</a>
+<h2> Bill splitter 2000 </h2>
 
 <form method="get">
+	<label for="Utility">Utility: <label>
+	<input type="text" name="Utility"><br><br>
+	
+	<label for="Amount">Amount: <label>
+	<input type="text" name="Amount"><br><br>
 
-	<label for="from">From:* <label>
-	<input type="text" name="from"<br><br>
+	<label for="Paid">Paid: <label>
+	<input type="text" name="Paid"><br><br>
 
-	<label for="to">To:* <label>
-	<input type="text" name="to"<br><br>
+	<button type="button" class="btn btn-success">Success</button>
+	
+	<!-- This is the save button-->
+	<input type="submit" value="Save to DB">
 
-	
-	<label for="message">Message:* <label>
-	<input type="text" name="message"<br><br>
-	
-		
-	<!-- This is the save buttn-->
-	<input type="Submit" value="Save to DB">
-	
-	
 <form>
