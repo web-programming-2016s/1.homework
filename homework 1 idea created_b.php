@@ -1,4 +1,6 @@
+<?php require_once("header.php"); ?>
 <?php
+
 	// require another php file
 	// ../../../ => 3 folders back
 	require_once("../../config.php");
@@ -225,38 +227,85 @@ $if_there_is_mob_cked = false;
 	
 ?>
 
-<br>
-<h2> First application by Angel Casal </h2>
-<a href="table.php">Link to table</a>
+<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Brand</a>
+		</div>
 
-<form method="get">
-    <label for="from">From:* </label>
-	<input type="text" name="from"><br><br>
-             
-    <label for="to">To:* </label>
-	<input type="text" name="to"><br><br>
-        
-	<label for="e-address">E-address:* </label>
-	<input type="text" name="e-address"><br><br>
-        
-    <label for="phone_number">Phone number:* </label>
-	<input type="text" name="phone_number"><br><br>
-        
-  
-  <input type="checkbox" name="mobility1" value="voluntary work"> I am interested in voluntary work<br>
-  <input type="checkbox" name="mobility2" value="seminars"> I am interested in seminars<br>
-  <input type="checkbox" name="mobility3" value="Youth exchange"> I am interested in youth exchange<br>
-  <input type="checkbox" name="mobility4" value="trainings"> I am interested in trainings
-<br><br>
-	
-	<label for="message">Message:* </label>
-	<input type="text" name="message"><br><br>
-	
-	<!-- This is the save button-->
-	<input type="submit" value="Save to DB">
-      
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		
+		  <ul class="nav navbar-nav">
+			
+			<li class="active">
+				<a href="homework%201%20idea%20created_b.php">
+					App page
+				</a>
+			</li>
+			
+			
+			<li>
+				<a href="table_b.php">
+					Table
+				</a>
+			</li>
+			
+		  </ul> 
+		  
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+<div class="container">
 
 
-</form>
+    <br>
+    <h2> First application by Angel Casal </h2>
+
+    <a href="table.php">Link to table</a>
+
+    <form method="get">
+        <label for="from">From:* </label>
+        <input type="text" name="from"><br><br>
+
+        <label for="to">To:* </label>
+        <input type="text" name="to"><br><br>
+
+        <label for="e-address">E-address:* </label>
+        <input type="text" name="e-address"><br><br>
+
+        <label for="phone_number">Phone number:* </label>
+        <input type="text" name="phone_number"><br><br>
+
+
+      <input type="checkbox" name="mobility1" value="voluntary work"> I am interested in voluntary work<br>
+      <input type="checkbox" name="mobility2" value="seminars"> I am interested in seminars<br>
+      <input type="checkbox" name="mobility3" value="Youth exchange"> I am interested in youth exchange<br>
+      <input type="checkbox" name="mobility4" value="trainings"> I am interested in trainings
+    <br><br>
+
+        <label for="message">Message:* </label>
+        <input type="text" name="message"><br><br>
+
+
+
+        <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <input class="btn btn-success hidden-xs" type="submit" value="Save data 1">
+                        <input class="btn btn-success btn-block visible-xs-block" type="submit" value="Save data 2">
+                    </div>
+                </div>
+            </form>
+
+    </form>
+
+</div>
 
 
