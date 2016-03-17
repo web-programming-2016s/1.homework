@@ -1,3 +1,4 @@
+<?php require_once("header.php"); ?>
 <?php
 
 	// require another php file
@@ -9,36 +10,47 @@
 	//*********************
 	// TO field validation
 	//*********************
-	if(isset($_GET["to"])){ //if there is ?to= in the URL
-		if(empty($_GET["to"])){ //if it is empty
+	if(isset($_GET["utility"])){ //if there is ?to= in the URL
+		if(empty($_GET["utility"])){ //if it is empty
 			$everything_was_okay = false; //empty
-			echo "Please enter the recipient! <br>"; // yes it is empty
+			echo "Please enter the utility! <br>"; // yes it is empty
 		}else{
-			echo "To: ".$_GET["to"]."<br>"; //no it is not empty
+			echo "Utility: ".$_GET["utility"]."<br>"; //no it is not empty
 		}
 	}else{
 		$everything_was_okay = false; // do not exist
 	}
 
 	//check if there is variable in the URL
-	if(isset($_GET["message"])){
+	if(isset($_GET["amount"])){
 		
 		//only if there is message in the URL
 		//echo "there is message";
 		
 		//if its empty
-		if(empty($_GET["message"])){
+		if(empty($_GET["amount"])){
 			//it is empty
 			$everything_was_okay = false;
-			echo "Please enter the message! <br>";
+			echo "Please enter the amount! <br>";
 		}else{
 			//its not empty
-			echo "Message: ".$_GET["message"]."<br>";
+			echo "Amount: ".$_GET["amount"]."<br>";
 		}
 		
 	}else{
 		//echo "there is no such thing as message";
 		$everything_was_okay = false;
+	}
+
+		if(isset($_GET["deadline"])){ //if there is ?to= in the URL
+		if(empty($_GET["deadline"])){ //if it is empty
+			$everything_was_okay = false; //empty
+			echo "Please enter the deadline! <br>"; // yes it is empty
+		}else{
+			echo "Deadline: ".$_GET["deadline"]."<br>"; //no it is not empty
+		}
+	}else{
+		$everything_was_okay = false; // do not exist
 	}
 	
 	
@@ -63,7 +75,7 @@
 		// 4 database
 		$mysql = new mysqli("localhost", $db_username, $db_password, "webpr2016_piekos");
 		
-		$stmt = $mysql->prepare("INSERT INTO messages_sample (recipient, message) VALUES (?,?)");
+		$stmt = $mysql->prepare("INSERT INTO homework (utility, amount, deadline, paid) VALUES (?,?,?,?)");
 			
 		//echo error
 		echo $mysql->error;
@@ -74,7 +86,7 @@
 		// d - decimal, float
 		
 		//for each question mark its type with one letter
-		$stmt->bind_param("ss", $_GET["to"], $_GET["message"]);
+		$stmt->bind_param("ssss", $_GET["utility"], $_GET["amount"], $_GET["deadline"], $_GET["paid"] );
 		
 		//save
 		if($stmt->execute()){
@@ -89,23 +101,109 @@
 	
 
 ?>
-<br>
-<a href="table.php">table</a>
-<h2> Bill splitter 2000 </h2>
 
-<form method="get">
-	<label for="Utility">Utility: <label>
-	<input type="text" name="Utility"><br><br>
-	
-	<label for="Amount">Amount: <label>
-	<input type="text" name="Amount"><br><br>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Brand</a>
+		</div>
 
-	<label for="Paid">Paid: <label>
-	<input type="text" name="Paid"><br><br>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		
+		  <ul class="nav navbar-nav">
+			
+			<li class="active">
+				<a href="application.php">
+					App page
+				</a>
+			</li>
+			
+			
+			<li>
+				<a href="table.php">
+					Table
+				</a>
+			</li>
+			
+		  </ul> 
+		  
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 
-	<button type="button" class="btn btn-success">Success</button>
-	
-	<!-- This is the save button-->
-	<input type="submit" value="Save to DB">
+	<div class="container">
 
-<form>
+		<h1> Insert the information of the payment </h1>
+
+		<form>
+
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="form-group">
+					<label for="Utility"> Utility: </label>
+						<input name="utility" id="utility" type="text" class="form-control">
+
+
+				</div>
+			</div>
+		
+		</div>
+
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="form-group">
+					<label for="Amount"> Amount: </label>
+						<input name="amount" id="amount" type="text" class="form-control">
+
+
+				</div>
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="form-group">
+					<label for="Deadline"> Deadline: </label>
+						<input name="deadline" id="deadline" type="text" class="form-control">
+
+
+				</div>
+			</div>
+		
+		</div>
+
+		<div class="row">
+
+				<div class="col-sm-3">
+				<div class="form-group">
+					<label for="Paid"> Paid: </label>
+						<input name="paid" id="paid" type="text" class="form-control">
+
+
+				</div>
+			</div>	
+		</div>
+		
+		<div class="row">
+				<div class="col-md-3 col-sm-6">
+
+		 <input class="btn btn-success hidden-xs" type="submit" value="Submit">
+		 <input class="btn btn-success btn-block visible-xs-block" type="submit" value="Submit">	
+		</div>	
+	</div>
+
+
+
+  
+	</div>
+  
+  </body>
+</html>

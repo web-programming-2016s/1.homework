@@ -1,3 +1,5 @@
+<?php require_once ("header.php"); ?>
+
 <?php
 	// table.php
 	
@@ -16,7 +18,7 @@ if(isset($_GET ["delete"])){
 		echo "Deleting row with id: ".$_GET["delete"];
 
 			// NOW () = current date-time
-		$stmt = $mysql->prepare("UPDATE messages_sample SET deleted=NOW() WHERE id = ?");
+		$stmt = $mysql->prepare("UPDATE homework SET deleted=NOW() WHERE id = ?");
 
 		//replace the ?
 
@@ -36,7 +38,7 @@ if(isset($_GET ["delete"])){
 
 
 	//SQL sentence
-	$stmt = $mysql->prepare("SELECT id, recipient, message, created FROM messages_sample WHERE deleted IS NULL ORDER BY created DESC LIMIT 10");
+	$stmt = $mysql->prepare("SELECT id, utility, amount, deadline, paid FROM homework WHERE deleted IS NULL ORDER BY deadline DESC LIMIT 10");
 	
 //WHERE deleted IS NULL show only those that are not deleted
 
@@ -44,7 +46,7 @@ if(isset($_GET ["delete"])){
 	echo $mysql->error;
 	
 	//variables for data for each row we will get
-	$stmt->bind_result($id, $recipient, $message, $created);
+	$stmt->bind_result($id, $utility, $amount, $deadline, $paid );
 	
 	//query
 	$stmt->execute();
@@ -52,12 +54,12 @@ if(isset($_GET ["delete"])){
 	$table_html = "";
 	
 	//add smth to string .=
-	$table_html .= "<table>";
+	$table_html .= "<table class='table table-striped'>";
 		$table_html .= "<tr>";
 			$table_html .= "<th>ID</th>";
-			$table_html .= "<th>Recipient</th>";
-			$table_html .= "<th>Message</th>";
-			$table_html .= "<th>Created</th>";
+			$table_html .= "<th>Utility</th>";
+			$table_html .= "<th>Amount</th>";
+			$table_html .= "<th>Deadline</th>";
 			$table_html .= "<th>Delete ?</th>";
 		$table_html .= "</tr>";
 	
@@ -69,19 +71,82 @@ if(isset($_GET ["delete"])){
 		//echo $id." ".$message."<br>";
 		$table_html .= "<tr>"; //start new row
 			$table_html .= "<td>".$id."</td>"; //add columns
-			$table_html .= "<td>".$recipient."</td>";
-			$table_html .= "<td>".$message."</td>";
-			$table_html .= "<td>".$created."</td>";
-			$table_html .= "<td><a href= '?delete=" .$id."'>X</a></td>";
+			$table_html .= "<td>".$utility."</td>";
+			$table_html .= "<td>".$amount."</td>";
+			$table_html .= "<td>".$deadline."</td>";
+			$table_html .= "<td>".$paid."</td>";
+			$table_html .= "<td>
+			<a class='btn btn-danger' href= '?delete=" .$id."'>X</a></td>";
 		$table_html .= "</tr>"; //end row
 
 	}
 	$table_html .= "</table>";
-	echo $table_html;
+
 	
 	
 	
 
 
 ?>
-<a href="application.php">app</a>
+
+<?php require_once("header.php"); ?>
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Brand</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		
+		  <ul class="nav navbar-nav">
+			
+			<li>
+				<a href="application.php">
+					Application page
+				</a>
+			</li>
+			
+			
+			<li class="active">
+				<a href="table.php">
+					Table
+				</a>
+			</li>
+			
+		  </ul> 
+		  
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+
+		<h1> This is the table page </h1>
+
+<?php 	echo $table_html; ?>
+
+  
+	</div>
+  
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+	</body>
+</html>
