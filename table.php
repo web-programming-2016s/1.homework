@@ -130,7 +130,7 @@ if(isset($_GET ["delete"])){
 
 	<div class="container">
 
-		<h1> This is the table page </h1>
+		<h1> List of standing payments </h1>
 
 <?php 	echo $table_html; ?>
 
