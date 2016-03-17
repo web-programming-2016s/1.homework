@@ -41,19 +41,12 @@
 
   <form method="get">
 
-    <label for="message">Budget:* <label>
-    <input type="text" name="a"<br><br>
-
-  	<label for="message">Expense2:* <label>
-  	<input type="text" name="b"<br><br>
+  	<label for="name">Name:* <label>
+  	<input type="text" name="name"><br>
 
 
-  	<label for="to">Expense3:* <label>
-  	<input type="text" name="c"<br><br>
-
-
-    <label for="from">Expense4:* <label>
-  	<input type="text" name="d"<br><br>
+    <label for="amount">Expense Amount:* <label>
+  	<input type="text" name="amount"><br>
 
 
 
@@ -61,108 +54,46 @@
   	<input type="Submit" value="Save to DB">
 
   <form>
-  	<p style="text-align:center;"><b> Something will be here </b></p>
+  	<p style="text-align:center;"><b> Take care </b></p>
 
   <?php
 	require_once("../../../config.php");
-  if(isset($_GET["to"])){
-  	if(empty($_GET["to"])){
-  		//it is empty
-  		$everything_was_okay = false;
-  		echo "Please enter the recipient!";
-
-  		}else{
-  			//its not empty
-  		echo "to: ".$_GET["to"]."<br>";
-  	}
-  }
-
-
-  if(isset($_GET["from"])){
-
-
-
-  	if(empty($_GET["from"])){
-  		//it is empty
-  		$everything_was_okay = false;
-  		echo "Please enter the recipient!";
-
-  		}else{
-  			//its not empty
-  		echo "from: ".$_GET["from"]."<br>";
-  	}
-  }
 
   	//check if there is variable in the URL
-  	if (isset ($_GET ["Budget"])) {
-  		//only if there is message in the URL
-  		//echo "there is message";
-  		//if its empty
-  		if (empty($_GET ["Budget"])){
-  			//it is empty
-  			echo "Enter the item <br>";
-  		}else{
-  			//its not empty
-  			echo "#1 item: ".$_GET["Budget"]."<br>";
-  		}
-
-  	}else{
-  		//echo "there is no such thing as message";
-  	}
-
-  		//check if there is variable in the URL
-  		if (isset ($_GET ["Expense2"])) {
-  			//only if there is message in the URL
-  			//echo "there is message";
-  			//if its empty
-  			if (empty($_GET ["Expense2"])){
-  				//it is empty
-  				echo "Enter the item <br>";
-  			}else{
-  				//its not empty
-  				echo "#2 item: ".$_GET["Expense2"]."<br>";
-  			}
-
-  		}else{
-  			//echo "there is no such thing as message";
-
-  		}
-
-  	//check if there is variable in the URL
-  	if (isset ($_GET ["Expense3"])) {
+  	if (isset ($_GET ["name"])) {
 
   		//only if there is message in the URL
   		//echo "there is message";
 
   		//if its empty
-  		if (empty($_GET ["Expense3"])){
+  		if (empty($_GET ["name"])){
 
   			//it is empty
-  			echo "Enter the item <br> ";
+  			echo "Enter the name <br> ";
 
   		}else{
 
   			//its not empty
 
-  			echo "#3 item: ".$_GET["Expense3"]."<br>";
+  			echo "#3 item: ".$_GET["name"]."<br>";
   		}
 
   	}else{
   		//echo "there is no such thing as message";
   	}
   		//check if there is variable in the URL
-  	if (isset ($_GET ["Expense4"])) {
+  	if (isset ($_GET ["amount"])) {
 
   		//only if there is message in the URL
   		//echo "there is message";
 
   		//if its empty
-  		if (empty($_GET ["Expense4"])){
+  		if (empty($_GET ["amount"])){
   			//it is empty
-  			echo "Enter the item <br>";
+  			echo "Enter the amount <br>";
   		}else{
   			//its not empty
-  			echo "#4 item : ".$_GET["Expense4"]."<br>";
+  			echo "#4 item : ".$_GET["amount"]."<br>";
   		}
 
   	}else{
@@ -187,7 +118,7 @@
       // 3 password
       // 4 database
       $mysql = new mysqli("localhost", $db_username, $db_password, "webpr2016_carmet");
-      $stmt = $mysql->prepare("INSERT INTO homework (Budget, Expense2, Expense3, Expense4) VALUES (?,?,?,?)");
+      $stmt = $mysql->prepare("INSERT INTO Homework2 (name, amount) VALUES (?,?)");
 
       //echo error
       echo $mysql->error;
@@ -198,7 +129,7 @@
       // d - decimal, float
 
       //for each question mark its type with one letter
-      $stmt->bind_param("ssss", $_GET["Budget"], $_GET["Expense2"],$_GET["Expense3"],$_GET["Expense4"]);
+      $stmt->bind_param("sd", $_GET["name"], $_GET["amount"]);
 
       //save
       if($stmt->execute()){
@@ -208,16 +139,12 @@
       }
 
     }
+    ?>
 
-
-
-
-  ?>
-  <br> My idea is to make a webapplication where you can easily search on map for places to go, events to visit. You can add your budget and
-    travelling time, so it will calculate the fuel costs(if travelling by car) and show you the best offers.
-    But since i have no skills and don't know how to do it I think i won't develop that idea. No other ideas still.<br>
+  <a href="table.php">table</a>
 
   <br>
   II Idea
     Budget managing and tracking your expenses. Creating lists for different fields ( entertainment, household, travelling, freetime, kids etc)
-that help you keep your money management under controll, without collecting receips and bills. Will go with thi i think
+that help you keep your money management under controll, without collecting receips and bills. Will go with thi i think.
+Adding budget and expenses it will show you the money that is left
