@@ -272,17 +272,45 @@ $if_there_is_mob_cked = false;
     <a href="table.php">Link to table</a>
 
     <form method="get">
-        <label for="from">From:* </label>
-        <input type="text" name="from"><br><br>
+        <div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="form-group">
+                        <label for="from">From:* </label>
+                        <input type="text" name="from"
+                        class="form-control">
+                    </div>
+				</div>
+			</div>
+        
+        <div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="form-group">
+                        <label for="to">To:* </label>
+                        <input type="text" name="to"
+                            class="form-control">
+                    </div>
+				</div>
+			</div>
+        
+        <div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="form-group">
+                    <label for="e-address">E-address:* </label>
+                    <input type="text" name="e-address"
+                                 class="form-control">
+                    </div>
+				</div>
+			</div>
 
-        <label for="to">To:* </label>
-        <input type="text" name="to"><br><br>
-
-        <label for="e-address">E-address:* </label>
-        <input type="text" name="e-address"><br><br>
-
-        <label for="phone_number">Phone number:* </label>
-        <input type="text" name="phone_number"><br><br>
+        <div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="form-group">
+                        <label for="phone_number">Phone number:* </label>
+                        <input type="text" name="phone_number"
+                        class="form-control">
+                    </div>
+				</div>
+			</div>
 
 
       <input type="checkbox" name="mobility1" value="voluntary work"> I am interested in voluntary work<br>
@@ -291,9 +319,15 @@ $if_there_is_mob_cked = false;
       <input type="checkbox" name="mobility4" value="trainings"> I am interested in trainings
     <br><br>
 
-        <label for="message">Message:* </label>
-        <input type="text" name="message"><br><br>
-
+        <div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="form-group">
+                      <label for="message">Message:* </label>
+                      <input type="text" name="message"
+                      class="form-control">
+                    </div>
+				</div>
+			</div>
 
 
         <div class="row">
