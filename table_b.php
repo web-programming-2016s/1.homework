@@ -41,7 +41,7 @@
 
 
 	//SQL sentence
-	$stmt = $mysql->prepare("SELECT id, name, amount, created FROM Homework2 WHERE deleted IS NULL ORDER BY created DESC LIMIT 10");
+	$stmt = $mysql->prepare("SELECT id, name, amount, created FROM Homework2 WHERE deleted IS NULL ORDER BY created DESC ");
 
 	//WHERE deleted IS NULL show only those that are not deleted
 
@@ -49,13 +49,13 @@
 	echo $mysql->error;
 
 	//variables for data for each row we will get
-	$stmt->bind_result($id,name,amount, $created);
+	$stmt->bind_result($id,$name,$amount, $created);
 
 	//query
 	$stmt->execute();
 
 	$table_html = "";
-
+  $sum=0;
 	//add smth to string .=
 	$table_html .= "<table class='table table-striped'>";
 		$table_html .= "<tr>";
@@ -68,7 +68,9 @@
 
 	// GET RESULT
 	//we have multiple rows
+
 	while($stmt->fetch()){
+      $sum=$sum+$amount;
 
 		//DO SOMETHING FOR EACH ROW
 		//echo $id." ".$message."<br>";
@@ -135,6 +137,7 @@
 		<h1> This is the Table page </h1>
 
     <?php echo $table_html; ?>
+        <?php echo $sum; ?>
 
 
 

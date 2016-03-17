@@ -55,7 +55,7 @@
 	$stmt->execute();
 
 	$table_html = "";
-
+  $sum=0;
 	//add smth to string .=
 	$table_html .= "<table class='table table-striped'>";
 		$table_html .= "<tr>";
@@ -69,7 +69,7 @@
 	// GET RESULT
 	//we have multiple rows
 	while($stmt->fetch()){
-
+    $sum=$sum+$amount;
 		//DO SOMETHING FOR EACH ROW
 		//echo $id." ".$message."<br>";
 		$table_html .= "<tr>"; //start new row
@@ -135,6 +135,7 @@
 		<h1> This is the Table page </h1>
 
     <?php echo $table_html; ?>
+    <?php echo $sum; ?>
 
 
 

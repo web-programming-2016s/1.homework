@@ -142,6 +142,7 @@
          <div class="form-group">
            <label for="amount">Amount: </label>
            <input name="amount" id="amount" type="text" class="form-control">
+           
          </div>
        </div>
      </div>
