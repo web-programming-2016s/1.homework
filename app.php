@@ -1,17 +1,17 @@
 <?php
 	//check if there is variable in the URL
-	if(isset($_GET["comment"])){
+	if(isset($_GET["day"])){
 		
 		//only if there is message in the URL
 		//echo "there is message";
 		
 		//if its empty
-		if(empty($_GET["comment"])){
+		if(empty($_GET["day"])){
 			//it is empty
-			echo "Please enter the message!";
+			echo "Please enter the date!";
 		}else{
 			//its not empty
-			echo "📓: ".$_GET["comment"]."<br>";
+			echo "🏃: ".$_GET["day"]."<br>";
 		}
 		
 	}
@@ -40,23 +40,26 @@
 
 <?php
 	//check if there is variable in the URL
-	if(isset($_GET["day"])){
+	if(isset($_GET["comment"])){
 		
 		//only if there is message in the URL
 		//echo "there is message";
 		
 		//if its empty
-		if(empty($_GET["day"])){
+		if(empty($_GET["comment"])){
 			//it is empty
-			echo "Please enter the date!";
+			echo "Please enter the message!";
 		}else{
 			//its not empty
-			echo "🏃: ".$_GET["day"]."<br>";
+			echo "📓: ".$_GET["comment"]."<br>";
 		}
 		
 	}
 
 ?>
+
+
+
 
 <?php
 	//check if there is variable in the URL
