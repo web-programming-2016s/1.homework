@@ -1,27 +1,103 @@
 <?php
-
-	//Getting the message from address
-	//if there is ?name=then $_GET["name"]
-	$my_message =$_GET["message"];
-	$to = $_GET ["to"];
-	
-	echo "My message is ".$my_message." and is to ".Sto;
+	//check if there is variable in the URL
+	if(isset($_GET["comment"])){
+		
+		//only if there is message in the URL
+		//echo "there is message";
+		
+		//if its empty
+		if(empty($_GET["comment"])){
+			//it is empty
+			echo "Please enter the message!";
+		}else{
+			//its not empty
+			echo "📓: ".$_GET["comment"]."<br>";
+		}
+		
+	}
 
 ?>
 
-<h2> First application </h2>
+<?php
+	//check if there is variable in the URL
+	if(isset($_GET["name"])){
+		
+		//only if there is message in the URL
+		//echo "there is message";
+		
+		//if its empty
+		if(empty($_GET["name"])){
+			//it is empty
+			echo "Please enter your name!";
+		}else{
+			//its not empty
+			echo "Person: ".$_GET["name"]."<br>";
+		}
+		
+	}
 
-<form method="get"> 
-		<label for="message">Message:* <label><br>
-		<input type="text" name="message"><br>
-		<input type="submit" value="Save to DB"
+?>
+
+<?php
+	//check if there is variable in the URL
+	if(isset($_GET["day"])){
 		
-		<label for="message">to:* <label><br>
-		<input type="text" name="to"><br>
+		//only if there is message in the URL
+		//echo "there is message";
 		
+		//if its empty
+		if(empty($_GET["day"])){
+			//it is empty
+			echo "Please enter the date!";
+		}else{
+			//its not empty
+			echo "🏃: ".$_GET["day"]."<br>";
+		}
 		
-		<label for="message">Secret:* <lable><br>
-		<input type="text" name="message"><br>
-		<!--This is the save button-->
-		<input type="submit" value="Post"
+	}
+
+?>
+
+<?php
+	//check if there is variable in the URL
+	if(isset($_GET["mood"])){
+		
+
+			echo "Mood: ".$_GET["mood"]."<br>";
+
+		}
+	
+
+?>
+
+
+
+
+
+
+
+
+
+<link href="css/stylecss" rel="stylesheet">
+
 <form>
+  Enter a date:
+  <input type="date" name="day" max="date("Y/m/d")"><br>
+  Your name: <textarea name="name" rows="1" cols="40"></textarea><br>
+  Comment: <textarea name="comment" rows="3" cols="60"></textarea><br>
+  Choose Mood:
+<input type="radio" name="mood" value="angry">Red
+<input type="radio" name="mood" value="ok">Green
+<input type="radio" name="mood" value="sad">Blue
+<input type="radio" name="mood" value="happy">Yellow<br>
+
+
+
+<input type="submit">
+
+
+
+
+
+
+</form>
