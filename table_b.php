@@ -72,6 +72,7 @@
 	while($stmt->fetch()){
       $sum=$sum+$amount;
 
+
 		//DO SOMETHING FOR EACH ROW
 		//echo $id." ".$message."<br>";
 		$table_html .= "<tr>"; //start new row

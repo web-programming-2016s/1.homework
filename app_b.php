@@ -142,13 +142,13 @@
          <div class="form-group">
            <label for="amount">Amount: </label>
            <input name="amount" id="amount" type="text" class="form-control">
-           
+
          </div>
        </div>
      </div>
      <div class="row">
        <div class="col-md-3 col-sm-6">
-         <input class="btn btn-success hidden-xs" type="submit" value="Save data 1">
+         <input class="btn btn-success hidden-xs" type="submit" value="Save data ">
          <input class="btn btn-success btn-block visible-xs-block" type="submit" value="Save data 2">
        </div>
      </div>
