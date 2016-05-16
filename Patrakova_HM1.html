@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<?php
+if(isset($_GET["message"])){
+		
+		
+		//if it's empty
+		if(empty($_GET["message"])){
+			//it is empty
+			echo "Please type a message!";
+	}else{
+			//its not empty
+			//echo "message: ".$_GET["message"]."<br>"; 
+		}
+		
+	}else{
+		//echo "there is no such thing as message typed";
+	}
+	?>
+</head>
+<body>
+<h2> First Homework </h2>
+<p> The idea is to send a personally designed message to your friends!</p>
+
+<form method="get">
+	<label for="color">Pick a color: <label>
+	 <input type="color" name="color" ><br><br>
+	
+	<label for="to">To: <label>
+	 <input type="to" name="to" required><br><br>
+	
+<label for="message">Message:* <label>
+	<input type="text" name="message" ><br><br>
+	
+	
+		<label for="from">From: <label>
+	<input type="text" name="from"><br><br>
+
+	<input type="submit" value="Save to DB">
+
+<form>
+</body>
+</html>
