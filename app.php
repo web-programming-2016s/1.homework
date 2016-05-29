@@ -1,11 +1,4 @@
 <?php
-
-	//require another php file
-	// ../../../ means > 3 folders back
-	require_once("../../config.php");
-	
-	$everything_was_okay = true;
-
 	//*************************************
 	//check if there is variable in the URL
 	//*************************************
@@ -70,46 +63,27 @@
 
 ?>
 
-<h2> Achive Your Goal Application </h2>
-<!DOCTYPE html>
-<html>
-<body>
+<h2> First application </h2>
 
-<form action="">
-Username:<br>
-<input type="text" name="userid">
-<br>
-Password:<br>
-<input type="password" name="psw">
-</form>
-</body>
-</html>
-<input type="submit" value="Sign In">
-<input type="submit" value="Sign Up">
-
-<br></br>
 <form method="get">
 
-	<label for="what">What:<label><br>
-	<input type="text" name="what"><br>
+	<label for="name">To:<label><br>
+	<input type="text" name="name"><br>
 	
-	<label for="quantity">Quantity:<label><br>
-	<input type="text" name="quantity"><br>
+	<label for="from">From:<label><br>
+	<input type="text" name="from"><br>
 	
-	<label for="deadline">Deadline:<label><br>
-	<input type="text" name="deadline"><br>
+	<label for="message">Message:<label><br>
+	<input type="text" name="message"><br>
 	
 	
-	<input type="submit" value="Save">
+	<input type="submit" value="Save to DB">
 	
 	
 <form>	
-<br>
-<a href="table.php">Check Your Achivements</a>
-</br>
 
 <!--*************************************************************************************************************************************************************-->
 <!--IDEA: Make an application, where is possible to make a shopping list. Add product, edit or delete it. The list auto-deletes in a week-->
 <!--*************************************************************************************************************************************************************-->
-<!--2. IDEA: Make a GOAL application. Where you write your goal and try to achive having time limits. e.g. READ 2 books during this month. "Days and books to go". -->
+<!--2. IDEA: Make a GOAL application. Where you write your goal and try to achive having time limits. e.g. READ 2 books during this month. Days and books to go. -->
 <!--*************************************************************************************************************************************************************-->
